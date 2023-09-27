@@ -32,7 +32,11 @@ body {
   float: left;
   overflow: hidden;
 }
-
+form{
+  outline: black auto;
+  color: #202020;
+  padding: 2%;
+}
 .dropdown .dropbtn {
   font-size: 16px;  
   border: none;
@@ -200,4 +204,7 @@ body {
   /* Set details to visible when cursor is hovering over class */
   visibility: visible;
   bottom: 90%;
+}
+login-box{
+  width: 3;
 }
