@@ -1,0 +1,210 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
+body {
+/* 
+  General CSS for the background image and font of the calendar (Ramses) 
+*/
+  font-family: sans-serif;
+  color: #efefef;
+  overflow: hidden;
+  background-image: url("sky.jpg");
+  background-size: cover;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar p {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+form{
+  outline: black auto;
+  color: #202020;
+  padding: 2%;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.day {
+/* 
+ Sets width and height of the day class based on percentage of view values (Ramses)
+*/
+  width: 18%;
+  height: 100vh;
+  float: left;
+  margin-bottom:5vh;
+}
+
+.day.time { 
+/* 
+  Overrides width value of day class so time values take up less width of screen than the classes (Ramses) 
+*/ 
+  width: 10%;
+}
+
+.day_title {
+/* 
+  Defines CSS attributes for the titles of the days at the top of the calendar (Ramses)
+*/ 
+  height: 10%;
+  background-color: #34495e;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 10vh;
+}
+
+.hour {
+/* 
+  Defines CSS values of the hour class and sets the positioning of the hour text (Ramses) 
+*/ 
+  height: 7%;
+  background-color: rgba(52, 73, 94,0.9);
+  font-size: 12px;
+  text-align: center;
+  vertical-align:top;
+  line-height: 2vh;
+}
+
+.class {
+/* 
+  Sets the general CSS attributes of the class attribute and sets the length of the class to match the VH (Ramses) 
+*/ 
+  width: 100%;
+  height: 8.75vh; /*1 Hour 15 minutes = 8.75vh*/
+  line-height: 8.75vh;
+  background-color: black;
+  font-size: 2vw;
+  font-weight: 300;
+  text-align: center ;
+}
+/* Different margins based on what time the first class of the day begins (Ramses) */
+.class.first8 {margin-top: 0vh;} /*Gap for 8 AM Class */
+.class.first930{margin-top: 10.5vh;} /*Gap for 9:30 AM Class */
+.class.first11{margin-top: 21vh;} /*Gap for 11 AM Class */
+.class.first1230{margin-top: 31.5vh;} /*Gap for 12:30 PM Class */
+.class.first2{margin-top: 42vh;} /*Gap for 2 PM Class */
+.class.first330{margin-top: 52.5vh;} /*Gap for 3:30 PM Class */
+.class.first5{margin-top: 63vh;} /*Gap for 5 PM Class */
+.class.first630{margin-top: 73.5vh;} /*Gap for 6:30 PM Class */
+ 
+/* Different margins based on how far apart the past class and current class are (Ramses) */
+.class.hour {margin-top: 7vh;} /*7 vh = 1 hr */
+.class.short { height: 1.75vh; line-height: 1.75vh; } /* 15 min gap */
+.class.gap1 { margin-top: 12.25vh; } /*1 class gap*/
+.class.gap2 {margin-top: 22.75vh;} /*2 Class gap */
+.class.gap3 {margin-top: 33.25vh;} /*3 Class gap */
+.class.gap4 {margin-top: 43.75vh;} /*4 Class gap */
+.class.gap5 {margin-top: 54.25vh;} /*5 Class gap */
+.class.gap6 {margin-top: 64.75vh;} /*6 Class gap */
+
+/* Different heights based on whether class is a general 1:15 hour class or a lab (Ramses) */
+.class.normal {height: 8.75vh; line-height: 8.75vh;} /*1 Hour 15 minutes = 8.75vh*/
+.class.lab {height: 19.25vh; line-height: 19.25vh;} /*Lab Class 2 Hour 45 Minutes */
+
+/* Different classes for different colors to enable color coding of classes (Ramses) */
+.green { background-color: #00642a; }
+.turquoise { background-color: #1abc9c; }
+.navy { background-color: #34495e; }
+.blue { background-color: #5ebefe; }
+.purple { background-color: #d57af9; }
+.grey { background-color: rgb(169, 170, 170); color: #202020; }
+.gray { background-color: #7f8c8d; }
+.red { background-color: #ff2d16; }
+.orange { background-color: #ffa30f; }
+.yellow { background-color: #ffdb49; color: #303030; }
+.spacing { background-color: transparent; }
+
+[details] {
+  /* Sets the position of the details and changes cursor to a pointer (Ramses) */
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  width: initial;
+}
+
+[details]:before {
+  /* Makes the details hidden by default */
+  visibility: hidden;
+  pointer-events: none;
+}
+
+[details]:before {
+  /* Position the details above the class element */
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-bottom: 15px;
+  margin-left: -75px;
+  padding: 7px 5px;
+  width: 140px;
+  background-color: pink;
+  color: #fff;
+  content: attr(details);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  border-radius: 8px;
+}
+
+[details]:hover:before {
+  /* Set details to visible when cursor is hovering over class */
+  visibility: visible;
+  bottom: 90%;
+}
+login-box{
+  width: 3;
+}
