@@ -9,16 +9,16 @@
     <body>
         <div class="login-box">
             <h2>Login</h2>
-            <form method="post" action="">
+            <form method="post" action="index.php">
               <div class="user-box">
                 <input type="text" name="email">
-                <label>Username</label>
+                <label>a</label>
               </div>
               <div class="user-box">
                 <input type="password" name="password">
                 <label>Password</label>
               </div>
-              <input type="submit" name="submit">
+              <input type="submit">
             
             </form>
             <div class = "echo-statement">
