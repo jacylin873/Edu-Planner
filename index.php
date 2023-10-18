@@ -32,6 +32,9 @@
             <div class = "echo-statement">
               <?php include("loginArithmetic.php"); ?>
             </div>
+            <form action = "signUp.html">
+              <button>Sign Up</button>
+            </form>
         </div>
     </body>
     </style>
