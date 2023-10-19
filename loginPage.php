@@ -8,7 +8,7 @@
       <title>Edu Planner</title>
 
       <!-- Links the CSS file to the PHP file (Jacy) -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/loginPage.css">
     </head>
 
     <!-- Body code for the structure of the website (Jacy) -->
@@ -30,13 +30,12 @@
             <input type="submit" name="submit">
             </form>
             <div class = "echo-statement">
-              <?php include("loginArithmetic.php"); ?>
+              <?php include("loginPageArithmetic.php"); ?>
             </div>
-            <form action = "signUp.html">
+            <form action = "register.php">
               <button>Sign Up</button>
             </form>
         </div>
     </body>
     </style>
 
-?>

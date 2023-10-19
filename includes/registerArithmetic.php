@@ -64,6 +64,6 @@ mysqli_free_result($result);
 mysqli_close($conn);
 
 //Redirect to index.php once new user is registered @Angel
-echo "<script>window.location.href='index.php';</script>";
+echo "<script>window.location.href='loginPage.php';</script>";
 }
 }

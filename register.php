@@ -5,7 +5,7 @@
     <title> User Registration Form</title>
 
     <!--<link rel="stylesheet" href="signUp.css"> -->
-<?php echo '<link rel="stylesheet" type="text/css" href="signUp.css"></head>'; ?>
+<?php echo '<link rel="stylesheet" type="text/css" href="register.css"></head>'; ?>
    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
    </head>
 
@@ -341,7 +341,7 @@
         <div class="button">
           <input type="submit" name="Register" value="Register">
         </div>
-        <?php include("signUp.php")?>
+        <?php include("registerArithmetic.php")?>
       </form>
     </div>
   </div>           
