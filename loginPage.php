@@ -30,7 +30,7 @@
             <input type="submit" name="submit">
             </form>
             <div class = "echo-statement">
-              <?php include("loginPageArithmetic.php"); ?>
+              <?php include("includes/loginPageArithmetic.php"); ?>
             </div>
             <form action = "register.php">
               <button>Sign Up</button>
