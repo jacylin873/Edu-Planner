@@ -4,9 +4,6 @@
 include("connect.php");
 
 
-
-
-
 //write query for all users
 $sql = 'SELECT user_email, user_password FROM user_profile';
 
@@ -16,18 +13,11 @@ $result = mysqli_query($conn, $sql);
 //fetch the rows from db table as an array
 $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-//free result from memory
-mysqli_free_result($result);
 
-//close database connection
-mysqli_close($conn);
-
-
-
-
+//Check if login button has been clicked, if so continue to other if-statements.
 if(isset($_POST['submit'])){
-//Conditional statement to check if either 'password' or 'username' is empty when submitting    
-   
+
+//Conditional statement to check if either 'password' or 'username' is empty when submitting       
 if(empty($_POST['email']) || (empty($_POST['password']))){
 
     //If either is empty, print error statement.
@@ -62,6 +52,12 @@ if(empty($_POST['email']) || (empty($_POST['password']))){
         $password = $tempPassword;
         $matchFound = True;
 
+        //free result from memory
+        mysqli_free_result($result);
+
+        //close database connection
+        mysqli_close($conn);
+
         //redirects to homepage.
         header("location:homepage.php");
         }
@@ -73,5 +69,3 @@ if(empty($_POST['email']) || (empty($_POST['password']))){
     }
 }
 }
-
-?>
