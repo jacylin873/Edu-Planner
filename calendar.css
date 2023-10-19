@@ -45,11 +45,14 @@ form{
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
+  margin: 0; /* keep at zero for now - Max*/
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
+    /*
+    Turns red on hover - Max
+    */
 }
 
 .dropdown-content {
@@ -63,7 +66,7 @@ form{
 
 .dropdown-content a {
   float: none;
-  color: black;
+  color: black; 
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -72,6 +75,9 @@ form{
 
 .dropdown-content a:hover {
   background-color: #ddd;
+      /*
+    Turns greyer on hover - Max
+    */
 }
 
 .dropdown:hover .dropdown-content {
