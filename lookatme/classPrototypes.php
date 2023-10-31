@@ -1,10 +1,14 @@
 <?php
 class User
 { //here we go!
+    static public $classcount = 0;
     public $name;
     public $UUID;
     public $classes = array();
-
+    public function __construct()
+    {
+        $uuid = self::$classcount++; // do not touch. inheritance does what it does best here
+    } // alright so please reference all courses through their UUID and the name should be !!!PURELY DECORATIVE!!! use the uuid to reference a class.
 }
 abstract class Course
 {
@@ -18,7 +22,6 @@ abstract class Course
     private int $endHour = 0;
     private int $startMinute = 0;
     private int $endMinute = 0;
-    static public $classcount = 0;
     //end of gross code
     public function getStartTime(): string
     {
@@ -33,10 +36,6 @@ abstract class Course
     {
         return self::$credits;
     } // ok so this one is kinda important for calculating credits. so be careful!
-    public function __construct()
-    {
-        $uuid = self::$classcount++; // do not touch. inheritance does what it does best here
-    } // alright so please reference all courses through their UUID and the name should be !!!PURELY DECORATIVE!!! use the uuid to reference a class.
 }
 class Professor
 {
