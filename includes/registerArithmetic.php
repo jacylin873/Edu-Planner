@@ -22,7 +22,7 @@ $state = $_POST["state"];
 $zip = $_POST["zipcode"];
 $country = $_POST["country"];
 $phone_num = $_POST["phone_number"];
-
+$clearence = intval($_POST["clearence"]);
 //Write query for a repeated email
 $checkEmail = "SELECT * FROM user_profile where user_email = '$user_email'";
 //Make query and get results
@@ -44,14 +44,14 @@ if(mysqli_num_rows($result) > 0){
 
 //SQL Command to add the user based on the database variables we had set earlier @Ramses
 //Change 'user' if that is not the name of your table @Ramses
-$sql = "INSERT INTO user_profile (user_email, user_password, f_name, m_name, l_name, address1, address2, city, state, zip, country, phone_num) VALUES(?, ?, ?, ?,?, ?, ?, ?,?, ?, ?, ?)";
+$sql = "INSERT INTO user_profile (user_email, user_password, f_name, m_name, l_name, address1, address2, city, state, zip, country, phone_num, clearence) VALUES(?, ?, ?, ?,?, ?, ?, ?,?, ?, ?, ?,?)";
 $stmt = mysqli_stmt_init($conn);
 
 if (!mysqli_stmt_prepare($stmt,$sql)){
     die(mysqli_error($conn));
 }
 //Setting parameters of insert @Ramses
-mysqli_stmt_bind_param($stmt,"ssssssssssss",$user_email, $user_password, $f_name, $m_name , $l_name, $address1, $address2, $city, $state, $zip, $country, $phone_num);
+mysqli_stmt_bind_param($stmt,"ssssssssssssi",$user_email, $user_password, $f_name, $m_name , $l_name, $address1, $address2, $city, $state, $zip, $country, $phone_num, $clearence);
 mysqli_stmt_execute($stmt);
 
 //Display "submission succesful alert"

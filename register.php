@@ -321,6 +321,27 @@
             <input type="text" placeholder="Enter user's phone number" id="phone_number" name="phone_number" required>
           </div>
         </div>
+        <!--Divider for input of: which type of user being created @Ramses-->
+        <div class="user-type-input">
+          <input type="radio" name="clearemce" id="clear-1" value="0">
+          <input type="radio" name="clearence" id="clear-2" value="1">
+          <input type="radio" name="clearence" id="clear-3" value="2" checked="checked">
+          <span class="choice-title">What position will this new user have at the university?</span>
+          <div class="category">
+            <label for="clear-1">
+              <span class="dot one"></span>
+              <span class="clearence">Admin</span>
+            </label>
+            <label for="clear-2">
+              <span class="dot two"></span>
+              <span class="clearence">Faculty</span>
+            </label>
+            <label for="clear-3">
+              <span class="dot three"></span>
+              <span class="clearence">Student</span>
+            </label>
+          </div>
+        </div>
         <!--Divider for input of: confirmation of desire to create user @Ramses-->
         <div class="choice-user-input">
           <input type="radio" name="choice" id="dot-1" value="true" required>
