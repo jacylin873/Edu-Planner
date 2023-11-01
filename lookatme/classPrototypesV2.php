@@ -26,12 +26,13 @@ abstract class Course
     {
         return self::$credits;
     } // ok so this one is kinda important for calculating credits. so be careful!
-    public function __construct(string $courseName, int $credits, int $startHour, int $startMinute, int $endHour,int $endMinute)
+    public function __construct(string $courseName, int $credits, int $startHour, int $startMinute, int $endHour, int $endMinute)
     {
         $this->courseName = $courseName;
         $this->credits = $credits;
     }
-    private function setCredits(int $credits){
+    private function setCredits(int $credits)
+    {
         $this->credits = $credits;
     }
 }
@@ -44,14 +45,17 @@ class Professor extends User
         //check if database has $username with $password
         #todo
     }
-    public function getClasses(){
+    public function getClasses()
+    {
         return $this->teaching;
     }
-    private function addClass(Course $course){
+    private function addClass(Course $course)
+    {
         array_push($this->teaching, $course);
     }
 
-    public function removeClass(string $class){
+    public function removeClass(string $class)
+    {
         $this->teaching = array_diff($this->teaching, array($class));
     }
 
@@ -77,11 +81,17 @@ class Student extends User
         }
         return false; // The user is not enrolled in the specified course
     }
-    public function getCourses(){
+    public function getCourses()
+    {
         return $this->classes;
     }
-    public function addCourse(Course $course){
+    public function addCourse(Course $course)
+    {
         array_push($this->classes, $course);
-        }
+    }
+    public function removeCourse(Course $course)
+    {
+        $this->classes = array_diff($this->classes, array($course));
+    }
 }
 ?>
