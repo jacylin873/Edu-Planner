@@ -8,7 +8,7 @@ if (isset($_COOKIE[$cookie_name])) {
     
     // Now, $arrayData contains the original array.
 
-    if ($user_array['clearence'] == 0)  {
+    if ($user_array['clearance'] == 0)  {
 
         ?>
         <!DOCTYPE html>

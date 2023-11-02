@@ -40,28 +40,28 @@ if (isset($_POST['user_email']) && isset($_POST['user_password'])) {
                 $_SESSION['f_name'] = $row['f_name'];
                 $_SESSION['UPID'] = $row['UPID'];
                 $_SESSION['logged_user'] = $row;
-                $_SESSION['clearence'] = $row['clearence'];
+                $_SESSION['clearance'] = $row['clearance'];
 //Sets user data as a cookie
                 $cookie_name = "eduPlanner_logged_user";
                 $cookie_value = serialize($_SESSION['logged_user']);
                 //unserialize() used to convert back to array
                 setcookie($cookie_name, $cookie_value, time() + 3600, "/");
-//Sends user to admin page if clearence level is 0
-                if ($_SESSION['clearence'] == 0){
+//Sends user to admin page if clearance level is 0
+                if ($_SESSION['clearance'] == 0){
                     header("Location: ../administration/adminHome.php");
                     exit();
                     }            
-//Sends user to faculty page if clearence level is 1    
-                else if ($_SESSION['clearence'] == 1){
+//Sends user to faculty page if clearance level is 1    
+                else if ($_SESSION['clearance'] == 1){
                     header("Location: ../faculty/facultyHome.php");
                     exit();
                     } 
-//Sends user to student page if clearence level is 2               
-                else if ($_SESSION['clearence'] == 2){
+//Sends user to student page if clearance level is 2               
+                else if ($_SESSION['clearance'] == 2){
                     header("Location: ../student/studentHome.php");
                     exit();
                 }
-//Sends user back to login page if clearence level is nonexistent
+//Sends user back to login page if clearance level is nonexistent
                 else{
                     header("Location: ../login.php");
                     exit();

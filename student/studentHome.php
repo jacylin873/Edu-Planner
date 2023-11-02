@@ -7,7 +7,7 @@ if (isset($_COOKIE[$cookie_name])) {
     $user_array = unserialize($serializedData);
     
 
-    if ($user_array['clearence'] == 2)  {
+    if ($user_array['clearance'] == 2)  {
 
         ?>
         <!DOCTYPE html>

@@ -85,15 +85,15 @@ if (isset($_COOKIE[$cookie_name])) {
     $user_array = unserialize($serializedData);
     echo "<script>alert('User already logged in; redirecting now.');</script>";
     
-    if ($user_array['clearence'] == 0){
+    if ($user_array['clearance'] == 0){
       header("Location: ./administration/adminHome.php");
       exit();
       }                
-    else if ($user_array['clearence'] == 1){
+    else if ($user_array['clearance'] == 1){
       header("Location: ./faculty/facultyHome.php");
       exit();
       }                
-    else if ($user_array['clearence'] == 2){
+    else if ($user_array['clearance'] == 2){
       header("Location: ./student/studentHome.php");
       exit();
     }
