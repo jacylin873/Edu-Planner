@@ -1,0 +1,30 @@
+body{
+    margin:auto;
+    overflow-x: hidden;
+}
+#home-img-txt-h1{
+    font-size: 10vw;
+    color: #013e7f;
+    text-shadow: 1px 1px black;
+ 
+    white-space: nowrap;
+    overflow: hidden;
+  }
+#home-img-txt-h2{
+    font-size: 8vw;
+    color: #f58426;
+    text-shadow: 1px 1px black;
+}
+.home-bg-img-div {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top:7vh;
+    z-index:-1;
+}
+.home-bg-img-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

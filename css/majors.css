@@ -1,0 +1,36 @@
+body{
+    margin:auto;
+    overflow-x: hidden;
+}
+.majors-vid{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top:7vh;
+    z-index:-1;
+    width:100vw;
+ }
+ .center-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+ }
+ .side-by-side {
+    display: flex;
+ }
+ 
+ .list {
+    list-style: none;
+    margin-right: 20px;
+ 
+    
+ }
+ .major_description{
+    text-align: justify; /* Horizontal centering */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw
+ }
+ .major_title{
+    text-align: center;
+ }
