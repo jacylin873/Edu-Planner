@@ -1,0 +1,212 @@
+body{
+    margin:auto;
+    overflow-x: hidden;
+}
+/* faculty Directory */
+
+.faculty_directory{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    font-family: 'Nunito', sans-serif;
+ }
+ .faculty_directory h1{
+    text-align: center;
+    font-size: 2em;
+    color: #00808f;
+    margin-bottom: 40px;
+ }
+ 
+ form.search_form{
+    position: relative;
+    margin-bottom: 30px;
+ }
+ form.search_form input{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1em;
+    border: solid 1px #C6C6C6;
+    border-radius: 5px;
+    margin: 0 auto;
+    transition: .2s ease-in;
+ }
+ form.search_form input:focus{
+    border-color: #00808f;
+    outline: none;
+ }
+ form.search_form i{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: #C6C6C6;
+ }
+ .faculty{
+    padding: 40px;
+    background-color: royalblue;
+    box-shadow: 1px 1px 30px rgba(0 0 0 / .1);
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+ }
+ .faculty img{
+    width: 100px;
+    border-radius: 100px;
+ }
+ .faculty h2{
+    font-size: 18px;
+    font-weight: 900;
+    color: orange;
+    margin-bottom: 0;
+    line-height: 0;
+ }
+ .office{
+    font-weight: 900;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;  
+ }
+ .faculty:hover h2{
+    color: royalblue;
+    background-color: orange;
+    transition: .2s ease-in;
+ }
+ .faculty:hover .position{
+    color: #333;
+    background-color: orange;
+    transition: .2s ease-in;
+ }
+ .faculty:hover .faculty_email{
+    color:  #333;
+    background-color: orange;
+    transition: .2s ease-in;
+ }
+ .faculty:hover .faculty_phone{
+    color:  #333;
+    background-color: orange;
+    transition: .2s ease-in;
+ }
+ .faculty:hover .office{
+    background-color: orange;
+    border: 1px solid #fff;
+ }
+ .faculty:hover{
+    background-color: orange;
+ }
+ 
+ @media (min-width: 768px){
+    .faculty_listing{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .faculty_listing .faculty{
+        width: 300px;
+        height: 300px;
+        cursor: pointer;
+    }
+    form.search_form{
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
+    }
+ }
+ @media (min-width: 1366px){
+    .faculty_listing .faculty{
+        width: 320px;
+    }
+    
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ /* Group CSS */
+ .group{
+    padding: 40px;
+    background-color: royalblue;
+    box-shadow: 1px 1px 30px rgba(0 0 0 / .1);
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    display:none;
+ }
+ .group img{
+    width: 100px;
+    border-radius: 100px;
+ }
+ .group h2{
+    font-size: 18px;
+    font-weight: 900;
+    color: orange;
+    margin-bottom: 0;
+    line-height: 0;
+ }
+ .group_role{
+    font-weight: 900;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;  
+ }
+ .group:hover h2{
+    color: royalblue;
+    background-color: orange;
+    transition: .2s ease-in;
+ }
+ .group:hover .member_year{
+    color:  #333;
+    background-color: orange;
+    transition: .2s ease-in;
+ }
+ .group:hover .member_major{
+    color:  #333;
+    background-color: orange;
+    transition: .2s ease-in;
+ }
+ .group:hover .group_role{
+    background-color: orange;
+    border: 1px solid #fff;
+ }
+ .group:hover{
+    background-color: orange;
+ }
+ 
+ @media (min-width: 768px){
+    .faculty_listing{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .faculty_listing .group{
+        width: 300px;
+        height: 300px;
+        cursor: pointer;
+    }
+ }
+ @media (min-width: 1366px){
+    .faculty_listing .group{
+        width: 320px;
+    }
+    
+ }
+ #searchgroup{
+    display:none;
+ }

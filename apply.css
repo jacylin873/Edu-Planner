@@ -1,0 +1,185 @@
+body{
+    margin:auto;
+    overflow-x: hidden;
+    background-color: #f58426;
+}
+.apply-img{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top:7vh;
+    z-index:-1;
+    width:100%;
+    margin-bottom: 0px;  
+ }
+
+ 
+
+/*Setting the page to be border-box and setting the font-family @Ramses */
+*{
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*Setting body to take up 100% of height, flexbox, 8 pixels of padding, and adding a linear gradient background of the school's colors @Ramses*/
+#Apply-Div{
+    margin-top:0px;
+  align-items: center;
+  background: linear-gradient(#f58426, #013e7f);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 8px;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+/*Setting CSS of the registration container including background, border-radius and margins @Ramses*/
+.container{
+  background-color: #FBFAF5;
+  border-radius: 25px;
+  height: 100%;
+  margin: 5px 0px;
+  max-width: 700px;
+  padding: 25px 30px;
+  width: 100%;
+  min-height: -webkit-fill-available;
+  
+}
+/*Setting the CSS of the title @Ramses */
+.title{
+  font-size: 32px;
+  font-weight: 500;
+  position: relative;
+}
+/*Defines the CSS of the form and user-information for the design of the wrapping of the elements and the spacing @Ramses */
+.user-information{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+/*Defines margin and width of the input fields @Ramses*/
+.input-box{
+  margin: 0px 0px 12px 0px;
+  width: calc(100% / 2 - 12px);
+}
+/*Defines CSS of the span class @Ramses*/
+.user-input{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+/*Defines CSS of the input elements in the input-box class @Ramses */
+.input-box input{
+  border: 1px solid #013e7f;
+  border-radius: 8px;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+  padding-left: 12px;
+  transition: all 0.1s ease;
+  width: 100%;  
+}
+/*Defines CSS of the country element before the dropdown @Ramses*/
+.countries{
+  border: 1px solid #013e7f;
+  border-radius: 8px;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+  padding-left: 12px;
+  transition: all 0.1s ease;
+  width: 100%; 
+  appearance: none;
+}
+/*Defines CSS for the title of the options @Ramses*/
+.choice-title{
+  font-size: 20px;
+ }
+ /*Defines CSS for the category and justifies content as space-around @Ramses */
+.category{
+  display: flex;
+  margin: 14px auto auto auto;
+  justify-content: space-around;
+  width: 80%;  
+ }
+ /*Defines CSS for the label and turns cursor into point @Ramses  */
+.category label{
+  cursor: pointer;
+  display: flex;
+  
+ }
+/*Sets CSS for the dot @Ramses */
+.dot{
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  height: 18px;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+  width: 18px;
+
+}
+/*Sets CSS when Yes is clicked @Ramses*/
+#dot-1:checked ~ .category label .one{
+   background: #f58426;
+   border-color: #013e7f;
+ }
+/*Sets CSS when No is clicked @Ramses*/
+#dot-2:checked ~ .category label .two{
+   background: red;
+   border-color: #d9d9d9;
+ }
+/*Removes radio display @Ramses*/
+form input[type="radio"]{
+   display: none;
+ }
+ /*Sets CSS properties of the Register button @Ramses */
+.button input{
+  background: linear-gradient(135deg, #f58426, #013e7f);
+  border: none;
+  border-radius: 20px;
+  color: #FBFAF5;
+  cursor: pointer;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  height: 35px;
+  margin: 35px 0
+ }
+/*Flips background color of register button when mouse is hovering over */
+.button input:hover{
+  background: linear-gradient(-135deg, #f58426, #013e7f);
+}
+
+
+/*Sets CSS view properties when display becomes very small @Ramses */
+@media(max-width: 570px){
+  .container{
+    max-width: 100%;
+  }
+  form .user-information .input-box{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-information{
+    max-height: 59vh;
+    overflow-y: scroll;
+  }
+  .user-information::-webkit-scrollbar{
+    width: 2px;
+  }
+  html{
+    font-size:16px;
+  }
+  .choice-title{
+    font-size:16px;
+  }
+  .title{
+    font-size:24px;
+  }
+}
+ 
