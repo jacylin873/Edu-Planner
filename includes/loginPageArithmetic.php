@@ -27,58 +27,10 @@ if (isset($_POST['user_email']) && isset($_POST['user_password'])) {
     } 
 //Continue if the passowrd field and email field are empty    
     else{
-//SQL command to select from database saved user which matches inputs
-        $sql = "SELECT * FROM user_profile WHERE user_email ='$user_email' AND user_password ='$password'";
-        $result = mysqli_query($conn, $sql);
-//Continue if result if found; return to login if not
-        if (mysqli_num_rows($result) === 1) {
-            $row = mysqli_fetch_assoc($result);
-//Double checks that the value in the database is equal to inputted values
-            if ($row['user_email'] === $user_email && $row['user_password'] === $password) {
-//Turns important fields into $_Session variables to be checked by following pages
-                $_SESSION['user_email'] = $row['user_email'];
-                $_SESSION['f_name'] = $row['f_name'];
-                $_SESSION['UPID'] = $row['UPID'];
-                $_SESSION['logged_user'] = $row;
-                $_SESSION['clearance'] = $row['clearance'];
-//Sets user data as a cookie
-                $cookie_name = "eduPlanner_logged_user";
-                $cookie_value = serialize($_SESSION['logged_user']);
-                //unserialize() used to convert back to array
-                setcookie($cookie_name, $cookie_value, time() + 3600, "/");
-//Sends user to admin page if clearance level is 0
-                if ($_SESSION['clearance'] == 0){
-                    header("Location: ../administration/adminHome.php");
-                    exit();
-                    }            
-//Sends user to faculty page if clearance level is 1    
-                else if ($_SESSION['clearance'] == 1){
-                    header("Location: ../faculty/facultyHome.php");
-                    exit();
-                    } 
-//Sends user to student page if clearance level is 2               
-                else if ($_SESSION['clearance'] == 2){
-                    header("Location: ../student/studentHome.php");
-                    exit();
-                }
-//Sends user back to login page if clearance level is nonexistent
-                else{
-                    header("Location: ../login.php");
-                    exit();
-                }
-            }
-//Sends user back to login page            
-            else{
-                header("Location: ../login.php?error=Incorect Email or password");
-                exit();
-            }
-        }
-//Sends user back to login page        
-        else{
-            header("Location: ../login.php?error=Incorect Email or password");
-            exit();
-        }
-    }
+        include_once("../classes/userClass.php");
+        $user = new User();
+        $user->login_User($user_email, $password);
+}
 }
 //Sends user back to login page
 else{
