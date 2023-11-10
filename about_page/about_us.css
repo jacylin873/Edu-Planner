@@ -3,11 +3,13 @@
     width: 50%;
     text-align: center;
     font-size: 80px;
+    color: darkblue;
 }
 
 h2 {
     font-size: 40px;
     text-align: center;
+    color: darkorange;
 }
 
 body {
@@ -18,12 +20,12 @@ body {
 
 .column {
     float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
+    width: 15%;
     padding: 0 8px;
 }
 
 .card {
     background-color: white;
+    text-align: center;
 }
   
