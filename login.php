@@ -14,40 +14,7 @@
    <!-- Body code for the structure of the website (Jacy) -->
    <body style="">
     
-    <nav id="topnav">
-        <div class="wrap-nav">
-        <div class="image-container">
-            <a id="home" class="nav-img" href="./index.php"><img class= "nav-img" src="./img/newpaltzlogo.jpg" alt="Home"></a>
-            <div class="alt-text">Home</div>
-          </div>
-        <a id="majors" class="nav-link" href="./majors.php">Majors</a>
-        <a id="apply" class="nav-link apply-big" href="./apply.php">Apply</a>
-
-        <a id="login" class="nav-link login-big" href="./login.php">Login</a>
-        <a id="staff" class="nav-link staff-big" href="./staff.php">Staff</a>
-        <div class="dropdown">
-            <button class="dropbtn" onmouseover="showDropDown()" >Dropdown
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content" onmouseout="hideDropDown()" id="myDropdown" >
-                <div class="apply-small">
-                    <a id="apply-small-a" class="nav-link" href="./apply.php">Apply</a>
-                </div>
-                <div class="login-small">
-                    <a id="login-small-a" class="nav-link" href="./studentlogin.php">Login</a>
-                </div>
-                <div class="staff-small">
-                    <a id="staff-small-a" class="nav-link" href="./staff.php">Staff</a>
-                </div>
-
-            </div>
-            </div>
-        </div>
-      </nav>
-    
-      
-
-
+   <?php require('./navbar.php'); ?>
         <!-- Div class code for Login title and Username Box (Jacy) -->
         <div class="login-box">
             <h2>Login</h2>

@@ -20,7 +20,11 @@ if (isset($_COOKIE[$cookie_name])) {
    <body>
    <?php require('./navbar.php'); ?>
             <div class="Main-Content">
-                <h1>Hello,  You are a student!</h1>    
+                <h1>Page to enroll in classes</h1>   
+                <h2>Form which has database of all the classes offered</h2> 
+                <h2>Dropdown of subjects which when option selected triggers javascript to call query for dropdown with all classes being offered</h2>
+                <h2>Must check to see if student is enrolled in a class during that time and send error if is</h2>
+                <h2>If no errors set, add class to array of classes</h2>
             </div>
     </body>
         </html>

@@ -25,7 +25,9 @@ body{
 #Apply-Div{
     margin-top:0px;
   align-items: center;
-  background: linear-gradient(#f58426, #013e7f);
+  background: linear-gradient(-45deg, #f58426, #013e7f,#f58426, #013e7f);
+  background-size: 400% 400%; 
+  animation: gradient 10s ease infinite;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -33,6 +35,19 @@ body{
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
+@keyframes gradient {
+  0% {
+  background-position:0 0
+  }
+  
+  50% {
+  background-position:100% 0
+  }
+  
+  100% {
+  background-position:0 0
+  }
+  }
 /*Setting CSS of the registration container including background, border-radius and margins @Ramses*/
 .container{
   background-color: #FBFAF5;

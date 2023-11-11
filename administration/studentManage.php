@@ -21,9 +21,14 @@ if (isset($_COOKIE[$cookie_name])) {
    <body>
    <?php require('./navbar.php'); ?>
     <div class="Main-Content">
-        <h1>Hello,  You are a admin!</h1>    
+        <h1>Page to Manage Students</h1> 
+        <h2>First and last name fields and then search button</h2>
+        <h2>Queries a list of all students who match the first and last name inputted </h2>     
+        <h2>Make user clickable / have "View" button next to them</h2>
+        <h2>Show the user info and the option to remove student with radio button prompt of are you sure </h2>
     </div>
            
+    
     
     <script src="../navbar.js"></script>
     </body>

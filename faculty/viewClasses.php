@@ -15,9 +15,11 @@ if (isset($_COOKIE[$cookie_name])) {
       <link rel="stylesheet" href="../css/userNavbar.css">
    </head>
    <body>
-        <?php require('./navbar.php'); ?>
+   <?php require('./navbar.php'); ?>
             <div class="Main-Content">
-                <h1>Hello,  You are a faculty member!</h1>    
+                <h1>Page for a faculty member to view all their classes</h1>
+                <h2>Have 'View' button which expands to show all students in a class</h2>
+                <h2>Have X button next to the students to allow to remove student from a class</h2>
             </div>
     </body>
 </html>

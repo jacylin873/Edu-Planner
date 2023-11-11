@@ -5,7 +5,10 @@ $user_array;
 if (isset($_COOKIE[$cookie_name])) {
     $serializedData = $_COOKIE[$cookie_name];
     $user_array = unserialize($serializedData);
-    if ($user_array['clearance'] == 1)  {
+    
+
+    if ($user_array['clearance'] == 2)  {
+
         ?>
 <!DOCTYPE html>
 <html>
@@ -15,12 +18,15 @@ if (isset($_COOKIE[$cookie_name])) {
       <link rel="stylesheet" href="../css/userNavbar.css">
    </head>
    <body>
-        <?php require('./navbar.php'); ?>
+   <?php require('./navbar.php'); ?>
             <div class="Main-Content">
-                <h1>Hello,  You are a faculty member!</h1>    
+                <h1>Page to view all professors</h1>   
+                <h2>List all professors that student is currently enrolled in classes of</h2> 
+                <h2>View button next to the professor which pops up to show which classes of the teacher enrolled in </h2>
+                
             </div>
     </body>
-</html>
+        </html>
         <?php 
     }
 }
