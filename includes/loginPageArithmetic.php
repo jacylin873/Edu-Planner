@@ -27,8 +27,11 @@ if (isset($_POST['user_email']) && isset($_POST['user_password'])) {
     } 
 //Continue if the passowrd field and email field are empty    
     else{
+        //Call user class
         include_once("../classes/userClass.php");
+        //Create new user object
         $user = new User();
+        //Call login_User method to check if user exists in database
         $user->login_User($user_email, $password);
 }
 }
