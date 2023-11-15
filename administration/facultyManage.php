@@ -25,6 +25,22 @@ if (isset($_COOKIE[$cookie_name])) {
         <h1>Page to manage faculty</h1>
         <h2>Subject dropdown and then search button</h2>
         <h3>Requires we add subject to user_Table, good to have to display student's major anyway</h3>
+        <form id="classSearchForm" action="search_results.php" method="post">
+            <span class="user-input" style="display: inline; float: none;">Faculty Search</span>
+            <div class="input-box">
+                <?php require('../courseDropdown.php'); ?>
+            </div>
+            <br>
+            <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+            <br>
+            <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+            <br>
+            <div class="input-box">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </form>
         <h2>Search button queries the subject value but also makes sure clearence is set to faculty (1)</h2>
         <h2>Have the faculty members be clickable or have a "View" button </h2>
         <h2>View button should bring up faculty member details and a query of all classes they are the professor of </h2>
