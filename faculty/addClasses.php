@@ -15,9 +15,11 @@ if (isset($_COOKIE[$cookie_name])) {
       <link rel="stylesheet" href="../css/userNavbar.css">
    </head>
    <body>
-        <?php require('./navbar.php'); ?>
+   <?php require('./navbar.php'); ?>
             <div class="Main-Content">
-                <h1>Hello,  You are a faculty member!</h1>    
+                <h1>Page to add classes</h1>
+                <h2>Include all fields of the class table</h2>
+                <h2>Use dropdown for major and time to control user input</h2>
             </div>
     </body>
 </html>

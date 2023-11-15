@@ -20,10 +20,18 @@ if (isset($_COOKIE[$cookie_name])) {
    </head>
    <body>
    <?php require('./navbar.php'); ?>
+
     <div class="Main-Content">
-        <h1>Hello,  You are a admin!</h1>    
+        <h1>Page to manage classes</h1>
+        <h2>Have dropdown of different subjects and search button</h2>
+        <h2>Display all available classes returned froms earch query</h2>
+        <h2>Let class be clickable / make a view button<h2>
+        <h2>View button should bring specific class to foreground with list of students in that class<h2>
+        <h2>X button next to each student to remove them from the class</h2>
+        <h2></h2>
     </div>
            
+    
     
     <script src="../navbar.js"></script>
     </body>
