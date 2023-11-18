@@ -21,9 +21,7 @@ body{
  
  .list {
     list-style: none;
-    margin-right: 20px;
- 
-    
+    margin-right: 20px; 
  }
  .major_description{
     text-align: justify; /* Horizontal centering */
