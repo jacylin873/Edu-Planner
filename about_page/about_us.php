@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="about_us.css">
-</head>
+   <head>
+   <!-- The beginning steps (header) of declaring a HTML/PHP website (Jacy) -->
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- The title to the website that shows up on the navigation bar (Jacy) -->
+      <title>Edu Planner</title>
+      <!-- Links the CSS file to the PHP file (Jacy) -->
+      <link rel="stylesheet" href="css/navbar.css">
+      <link rel="stylesheet" href="css/studentlogin.css">
+   </head>
+   <!-- Body code for the structure of the website (Jacy) -->
+   <body style="">
+   <?php require('./navbar.php'); ?>
 
-<body>
-
-<div class="about-section">
-
-    <h1>About Us</h1>
-
-</div>
-
+<h1>About us</h1>
 <h2>The Team</h2>
-  
 <!-- Column cards to display pictures and bio of team -->
 <div class="row">
     <div class="column">

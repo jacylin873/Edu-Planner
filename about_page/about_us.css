@@ -13,6 +13,7 @@ h2 {
 }
 
 body {
+    background-color: steelblue;
     background-image: url("nplandscape_1.png");
     background-repeat: no-repeat;
     background-size: cover;
