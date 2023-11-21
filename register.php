@@ -363,6 +363,7 @@
           <input type="submit" name="Register" value="Register">
         </div>
         <?php include("includes/registerArithmetic.php")?>
+        <p>Already Registered? <a href="login.php">Click here!</a></p>
       </form>
     </div>
   </div>           
