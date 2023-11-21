@@ -45,7 +45,6 @@
     </body>
 </html>
 
-
 <?php
 if (isset($_POST['submit'])){
     $header = $_POST['header'];

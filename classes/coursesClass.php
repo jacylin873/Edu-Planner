@@ -19,7 +19,9 @@ Class Courses{
     public $attributes;
     public $available_seats;
 
-
+    /**===========================================================================================================================================================================
+     * Method to print all courses from database table 'courses'
+     */
     public function get_Courses(){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses";
@@ -45,66 +47,99 @@ Class Courses{
         }
     }
 
+    /**===========================================================================================================================================================================
+     * Method to insert a course into the database table 'courses'
+     */
     public function insert_Course($header, $crn, $course, $sec, $title, $instructional_method, $credits, $dates, $days, $time, $loc, $instructor, $attributes, $available_seats){
         include("includes/connect.php");
         $sql = "INSERT INTO courses (header, crn, course, sec, title, instructional_method, credits, dates, days, time, loc, instructor, attributes, available_seats) VALUES ('$header', '$crn', '$course', '$sec', '$title', '$instructional_method', '$credits', '$dates', '$days', '$time', '$loc', '$instructor', '$attributes', '$available_seats')";
         $result = mysqli_query($conn, $sql);
     }   
 
+    /**===========================================================================================================================================================================
+     * Method to update a course into the database table 'courses'
+     */
     public function update_Course($header, $crn, $course, $sec, $title, $instructional_method, $credits, $dates, $days, $time, $loc, $instructor, $attributes, $available_seats){
         include("includes/connect.php");
         $sql = "UPDATE courses SET header='$header', crn='$crn', course='$course', sec='$sec', title='$title', instructional_method='$instructional_method', credits='$credits', dates='$dates', days='$days', time='$time', loc='$loc', instructor='$instructor', attributes='$attributes', available_seats='$available_seats' WHERE CLID='$CLID'";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to delete a course into the database table 'courses'
+     */
     public function delete_Course($CLID){
         include("includes/connect.php");
         $sql = "DELETE FROM courses WHERE CLID='$CLID'";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to view a course in database table 'courses' using CLID
+     */
     public function view_Course($CLID){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses WHERE CLID='$CLID'";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to view all courses in database table 'courses'
+     */
     public function view_All_Courses(){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to view a course in database table 'courses' using CRN
+     */
     public function view_Course_By_CRN($crn){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses WHERE crn='$crn'";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to view a course in database table 'courses' using Course
+     */
     public function view_Course_By_Course($course){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses WHERE course='$course'";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to view a course in database table 'courses' using Section
+     */
     public function view_Course_By_Sec($sec){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses WHERE sec='$sec'";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to view a course in database table 'courses' using Instructor
+     */
     public function view_Course_By_Instructor($instructor){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses WHERE instructor='$instructor'";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to view a course in database table 'courses' using Attributes
+     */
     public function view_Course_By_Attributes($attributes){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses WHERE attributes='$attributes'";
         $result = mysqli_query($conn, $sql);
     }
 
+    /**===========================================================================================================================================================================
+     * Method to print a list of courses in database table 'courses' as a table format
+     */
     public function print_As_Table(){
         include("includes/connect.php");
         $sql = "SELECT * FROM courses";
@@ -147,4 +182,5 @@ Class Courses{
     }
 }
 }
+
 ?>
