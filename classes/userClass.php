@@ -1,5 +1,8 @@
 <?php
-//
+
+//Global function to include user class in another file.
+//include_once("classes/userClass.php");
+
 class User{
     private $UPID;
     public $user_email;
