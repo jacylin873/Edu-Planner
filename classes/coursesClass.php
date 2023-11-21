@@ -140,10 +140,9 @@ Class Courses{
                 echo "<td>".$row['days']."</td>";
                 echo "<td>".$row['time']."</td>";
                 echo "<td>".$row['loc']."</td>";
-                echo "<td>".$row['time']."</td>";
-                echo "<td>".$row['time']."</td>";
-                echo "<td>".$row['time']."</td>";
-                echo "<td>".$row['time']."</td>";
+                echo "<td>".$row['instructor']."</td>";
+                echo "<td>".$row['attributes']."</td>";
+                echo "<td>".$row['available_seats']."</td>";
         }
     }
 }
