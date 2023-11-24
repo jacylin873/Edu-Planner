@@ -8,12 +8,18 @@
       <!-- The title to the website that shows up on the navigation bar (Jacy) -->
       <title>Edu Planner</title>
       <!-- Links the CSS file to the PHP file (Jacy) -->
-      <link rel="stylesheet" href="css/navbar.css">
-      <link rel="stylesheet" href="css/studentlogin.css">
+      <!-- COMMENTING THESE OUT FOR NOW, USING ORIGINAL CSS MADE FOR PAGE (Daniel) -->
+      <!--<link rel="stylesheet" href="css/navbar.css">-->
+      <!--<link rel="stylesheet" href="css/studentlogin.css">-->
+      <link rel="stylesheet" href="about_us.css">
    </head>
    <!-- Body code for the structure of the website (Jacy) -->
    <body style="">
    <?php require('./navbar.php'); ?>
+
+<div class="navbar">    <!-- Navigation bar at top of page -->
+<a href="#back">Back</a> <!-- Back button (ADD LINK TO GO BACK TO MAIN PAGE) -->
+</div>
 
 <h1>About us</h1>
 <h2>The Team</h2>
@@ -24,7 +30,7 @@
         <img src="default_profile.png" alt="Daniel" style="width:100%">
         <div class="container">
           <h2>Daniel Amoruso</h2>
-          <p class="title">Data Schema Designer</p>
+          <p class="title">Data Schema Designer, Webpage Designer</p>
           <p>Some text that describes me lorem ipsum ipsum lorem.</p>
           <p>amorusod1@newpaltz.edu</p>
         </div>
