@@ -11,11 +11,11 @@
    position:fixed;
    top:0;
    left:0;
-   background:linear-gradient(to left,#f58426,#013e7f,#f58426,#013e7f);
+   background:linear-gradient(to top,#f58426,#fac192,#668BB2,#013e7f);
    background-size:400% 400%;
    animation:gradient 15s linear infinite;
    font-family:Helvetica,Arial,sans-serif;
-   font-size:15px;
+   font-size:14pt;
    z-index:9999;
    display:flex;
    justify-content:space-between;
@@ -76,15 +76,19 @@
    position:absolute;
    bottom:0;
    left:0;
-   background-color:#f58426;
+   font-size:14pt;
+   background:linear-gradient(to top,#fac192,#f58426);
    color:#013e7f;
-   font-size:2vw;
+   text-decoration: underline;
    padding:5px;
    display:none;
    width:167px;
    text-align:center;
    transform:translateY(100%);
    font-weight:500
+   }
+   .alt-text a {
+      color: #3d85c6;
    }
    
    .image-container:hover .alt-text {
@@ -116,7 +120,6 @@
    margin:0;
    width:120px;
    height:55px;
-   color:#fff;
    text-align:center;
    text-decoration:none;
    margin-top:0
@@ -130,23 +133,27 @@
    display:none;
    position:absolute;
    background-color:#f9f9f9;
-   width:120px;
+   width:80px;
    box-shadow:1px 1px 1px 1px #0003;
    z-index:10
    }
    
    .dropdown-content a {
    float:none;
-   color:#000;
-   padding:12px 16px;
+   color:#fff;
+   padding:12px 11px;
    text-decoration:none;
    display:block;
-   text-align:left
+   text-align:left;
+   background:linear-gradient(to left,#668BB2,#013e7f);
+
    }
    
    .dropdown-content a:hover {
-   background-color:#ddd;
-   width:89px
+      
+      background:linear-gradient(to top,#fac192,#f58426);
+      color:#013e7f;
+   width:80px;
    }
    
    .show {

@@ -6,6 +6,7 @@ abstract class Course
     private int $uuid = 0;
     private int $credits = 3;
     private int $startHour = 0;
+    private string $courseName = "";
     private int $startMinute = 0;
     private int $endHour = 0;
     private int $endMinute = 0;
