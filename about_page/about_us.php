@@ -18,7 +18,7 @@
    <?php require('./navbar.php'); ?>
 
 <div class="navbar">    <!-- Navigation bar at top of page -->
-<a href="#back">Back</a> <!-- Back button (ADD LINK TO GO BACK TO MAIN PAGE) -->
+<a href="../index.php">Back</a> <!-- Back button (ADD LINK TO GO BACK TO MAIN PAGE) -->
 </div>
 
 <h1>About us</h1>
