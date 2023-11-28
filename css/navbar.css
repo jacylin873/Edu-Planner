@@ -42,18 +42,23 @@
    display:inline-block;
    width:100px;
    height:55px;
-   color:#fff;
    text-align:center;
    line-height:55px;
    text-decoration:none;
    margin-top:0
    }
+   .nav-link a{
+      color:red;
+   }
    
    .nav-link:hover {
+   color:#f58426;
    cursor:pointer
    }
    
    .nav-img:hover {
+      color:#f58426;
+
    cursor:pointer
    }
    
@@ -64,7 +69,6 @@
    text-decoration:none;
    display:inline-block;
    vertical-align:middle;
-   margin-right:50px
    }
    
    .image-container {
@@ -146,24 +150,17 @@
    display:block;
    text-align:left;
    background:linear-gradient(to left,#668BB2,#013e7f);
-
    }
-   
    .dropdown-content a:hover {
       
       background:linear-gradient(to top,#fac192,#f58426);
       color:#013e7f;
    width:80px;
    }
-   
    .show {
    display:block
    }
    
-
-
-
-
 
    @media only screen and (min-width: 630px) {
       .dropbtn {
