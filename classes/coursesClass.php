@@ -93,6 +93,18 @@ Class Courses{
     }
 
     /**===========================================================================================================================================================================
+     * Method to to display all subjects in a dropdown menu
+     */
+     public function display_Subjects(){
+        include("../includes/connect.php");
+        $sql = "SELECT * FROM course_subjects";
+        $result = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_assoc($result)){
+            echo "<option value='".$row['SUBID']."'>".$row['crn_value']." - ".$row['subjects']."</option>";
+        }
+        }
+
+    /**===========================================================================================================================================================================
      * Method to view a course in database table 'courses' using CRN
      */
     public function view_Course_By_CRN($crn){
