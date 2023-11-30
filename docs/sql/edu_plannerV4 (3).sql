@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2023 at 11:43 PM
+-- Generation Time: Nov 30, 2023 at 03:53 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -266,13 +266,14 @@ INSERT INTO `countries` (`CTID`, `country_name`) VALUES
 --
 -- Table structure for table `courses`
 --
--- Creation: Nov 18, 2023 at 10:42 PM
+-- Creation: Nov 29, 2023 at 10:45 PM
+-- Last update: Nov 30, 2023 at 02:53 AM
 --
 
 CREATE TABLE `courses` (
   `CLID` int(11) NOT NULL,
   `header` varchar(25) DEFAULT NULL,
-  `crn` varchar(25) DEFAULT NULL,
+  `CRN` varchar(25) DEFAULT NULL,
   `course` varchar(25) DEFAULT NULL,
   `sec` varchar(25) DEFAULT NULL,
   `title` varchar(25) DEFAULT NULL,
@@ -291,13 +292,13 @@ CREATE TABLE `courses` (
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`CLID`, `header`, `crn`, `course`, `sec`, `title`, `instructional_method`, `credits`, `dates`, `days`, `time`, `loc`, `instructor`, `attributes`, `available_seats`) VALUES
+INSERT INTO `courses` (`CLID`, `header`, `CRN`, `course`, `sec`, `title`, `instructional_method`, `credits`, `dates`, `days`, `time`, `loc`, `instructor`, `attributes`, `available_seats`) VALUES
 (2, 'Undergraduate Courses', '1097', 'CPS104', '1', 'Visual Programming', 'FS', 3, '1/22-5/17', 'M', '5:00 PM-7:50 PM', 'SH 259', 'Cameron Pardo', 'Liberal Arts', '24'),
 (3, 'Undergraduate Courses', '1096', 'CPS110', '1', 'Web Page Design', 'FS', 3, '1/22-5/17', 'T', '5:00 PM-7:50 PM', 'SH 271', 'Katherine Brainard', 'Liberal Arts', '24'),
 (4, 'Undergraduate Courses', '1104', 'CPS210', '1', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'MR', '8:00 AM-9:15 AM', 'CSB 222', 'Michael Curry', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '15'),
 (5, 'Undergraduate Courses', '1104', 'CPS210', '1', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'W', '8:00 AM-10:50 AM', 'CSB 021', '', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '15'),
-(6, 'Undergraduate Courses', '1100', 'CPS210', '2', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'MR', '8:00 AM-9:15 AM', 'CSB 222', 'Michael Curry', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '15'),
-(7, 'Undergraduate Courses', '1100', 'CPS210', '2', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'W', '12:30 PM-3:20 PM', 'CSB 021', '', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '15'),
+(6, 'Undergraduate Courses', '1100', 'CPS210', '2', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'MR', '8:00 AM-9:15 AM', 'CSB 222', 'Michael Curry', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '14'),
+(7, 'Undergraduate Courses', '1100', 'CPS210', '2', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'W', '12:30 PM-3:20 PM', 'CSB 021', '', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '14'),
 (8, 'Undergraduate Courses', '1103', 'CPS210', '3', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'TF', '11:00 AM-12:15 PM', 'HUM 320', 'Michael Curry', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '15'),
 (9, 'Undergraduate Courses', '1103', 'CPS210', '3', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'W', '3:30 PM-6:20 PM', 'HUM 301', '', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '15'),
 (10, 'Undergraduate Courses', '1101', 'CPS210', '4', 'Computer Science I: Found', 'FS', 4, '1/22-5/17', 'TF', '11:00 AM-12:15 PM', 'HUM 320', 'Michael Curry', 'Critical Thinking Introductory, Information Mgmt Intro, Liberal Arts', '15'),
@@ -312,8 +313,8 @@ INSERT INTO `courses` (`CLID`, `header`, `crn`, `course`, `sec`, `title`, `instr
 (19, 'Undergraduate Courses', '1108', 'CPS310', '4', 'Computer Science II: Data', 'FS', 4, '1/22-5/17', 'R', '3:30 PM-6:20 PM', 'LC 110', '', 'Liberal Arts', '15'),
 (20, 'Undergraduate Courses', '1105', 'CPS315', '1', 'Computer Science III', 'FS', 4, '1/22-5/17', 'MR', '11:00 AM-12:15 PM', 'LC 104', 'Min Chen', 'Liberal Arts', '15'),
 (21, 'Undergraduate Courses', '1105', 'CPS315', '1', 'Computer Science III', 'FS', 4, '1/22-5/17', 'R', '3:30 PM-6:20 PM', 'SH 271', '', 'Liberal Arts', '15'),
-(22, 'Undergraduate Courses', '1106', 'CPS315', '2', 'Computer Science III', 'FS', 4, '1/22-5/17', 'MR', '11:00 AM-12:15 PM', 'LC 104', 'Min Chen', 'Liberal Arts', '15'),
-(23, 'Undergraduate Courses', '1106', 'CPS315', '2', 'Computer Science III', 'FS', 4, '1/22-5/17', 'W', '8:00 AM-10:50 AM', 'SH 271', '', 'Liberal Arts', '15'),
+(22, 'Undergraduate Courses', '1106', 'CPS315', '2', 'Computer Science III', 'FS', 4, '1/22-5/17', 'MR', '11:00 AM-12:15 PM', 'LC 104', 'Min Chen', 'Liberal Arts', '14'),
+(23, 'Undergraduate Courses', '1106', 'CPS315', '2', 'Computer Science III', 'FS', 4, '1/22-5/17', 'W', '8:00 AM-10:50 AM', 'SH 271', '', 'Liberal Arts', '14'),
 (24, 'Undergraduate Courses', '1073', 'CPS315', '3', 'Computer Science III', 'FS', 4, '1/22-5/17', 'MR', '11:00 AM-12:15 PM', 'LC 104', 'Min Chen', 'Liberal Arts', '15'),
 (25, 'Undergraduate Courses', '1073', 'CPS315', '3', 'Computer Science III', 'FS', 4, '1/22-5/17', 'W', '12:30 PM-3:20 PM', 'SH 271', '', 'Liberal Arts', '15'),
 (26, 'Undergraduate Courses', '1102', 'CPS330', '1', 'Assembly Language and Com', 'FS', 4, '1/22-5/17', 'MR', '12:30 PM-1:45 PM', 'LC 104', 'Reed Williams', 'Liberal Arts', '20'),
@@ -339,18 +340,13 @@ INSERT INTO `courses` (`CLID`, `header`, `crn`, `course`, `sec`, `title`, `instr
 (46, 'Undergraduate Courses', '1087', 'CPS493', '3', 'Web Server Programming', 'FS', 3, '1/22-5/17', 'MR', '2:00 PM-3:15 PM', 'CSB 221', 'Moshe Plotkin', '', '35'),
 (47, 'Undergraduate Courses', '1074', 'CPS493', '8', 'Deep Learning', 'FS', 3, '1/22-5/17', 'MR', '11:00 AM-12:15 PM', 'HUM 115', 'Chirakkal Easwaran', '', '10'),
 (48, 'Graduate Courses', '1079', 'CPS593', '2', 'Foundations of Computer S', 'FS', 3, '1/22-5/17', 'TF', '9:30 AM-10:45 AM', 'HUM 216', 'Ashley Suchy', '', '35'),
-(49, 'Graduate Courses', '1091', 'CPS593', '3', 'Programming & Data Struct', 'FS', 3, '1/22-5/17', 'MR', '2:00 PM-3:15 PM', 'HUM 113', 'Keqin Li', '', '35'),
+(49, 'Graduate Courses', '1091', 'CPS593', '3', 'Programming & Data Struct', 'FS', 3, '1/22-5/17', 'MR', '2:00 PM-3:15 PM', 'HUM 113', 'Keqin Li', '', '34'),
 (50, 'Graduate Courses', '1088', 'CPS593', '4', 'Discrete Structures', 'FS', 3, '1/22-5/17', 'MR', '9:30 AM-10:45 AM', 'LC 113', 'Katherine Brainard', '', '35'),
 (51, 'Graduate Courses', '1085', 'CPS593', '5', 'Web & Database Programmin', 'FS', 3, '1/22-5/17', 'MR', '11:00 AM-12:15 PM', 'HUM 310', 'Kaitlin Hoffmann', '', '35'),
 (52, 'Graduate Courses', '1086', 'CPS593', '6', 'Artificial Intelligence', 'FS', 3, '1/22-5/17', 'TF', '11:00 AM-12:15 PM', 'LC 103', 'Min Chen', '', '35'),
 (53, 'Graduate Courses', '1093', 'CPS593', '7', 'Cybersecurity', 'FS', 3, '1/22-5/17', 'TF', '12:30 PM-1:45 PM', 'HUM 310', 'Kaitlin Hoffmann', '', '25'),
 (54, 'Graduate Courses', '1089', 'CPS593', '8', 'Deep Learning', 'FS', 3, '1/22-5/17', 'MR', '11:00 AM-12:15 PM', 'HUM 115', 'Chirakkal Easwaran', '', '24'),
-(55, 'Graduate Courses', '1090', 'CPS593', '9', 'Functional Programming', 'FS', 3, '1/22-5/17', 'MR', '12:30 PM-1:45 PM', 'LC 102', 'Ashley Suchy', '', '35'),
-(57, NULL, 'z', 'z', 'z', 'z', 'z', 0, 'z', 'z', 'z', 'z', 'z', 'z', 'z'),
-(58, NULL, 'x', 'x', 'x', 'x', 'x', 0, 'x', 'x', 'x', 'x', 'x', 'x', 'x'),
-(59, NULL, 'g', 'z', 'z', 'z', 'z', 0, '3', 'z', 'z', 'z', 'z', 'z', 'z'),
-(60, NULL, 'h', 'h', 'h', 'h', 'h', 0, '4', 'h', 'h', 'h', 'h', 'h', 'h'),
-(61, 'v', 'v', 'v', 'v', 'v', 'v', 2, 'v', 'v', 'v', 'v', 'v', 'v', 'v');
+(55, 'Graduate Courses', '1090', 'CPS593', '9', 'Functional Programming', 'FS', 3, '1/22-5/17', 'MR', '12:30 PM-1:45 PM', 'LC 102', 'Ashley Suchy', '', '35');
 
 -- --------------------------------------------------------
 
@@ -469,7 +465,7 @@ CREATE TABLE `login_logs` (
 -- Table structure for table `user_profile`
 --
 -- Creation: Nov 29, 2023 at 10:21 PM
--- Last update: Nov 29, 2023 at 10:20 PM
+-- Last update: Nov 30, 2023 at 02:45 AM
 --
 
 CREATE TABLE `user_profile` (
