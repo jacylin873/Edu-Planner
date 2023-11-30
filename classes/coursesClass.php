@@ -177,7 +177,7 @@ Class Courses{
             while($row = mysqli_fetch_assoc($result)){
                 echo "<tr>";
                 echo "<td>".$row['header']."</td>";
-                echo "<td>".$row['crn']."</td>";
+                echo "<td>".$row['CRN']."</td>";
                 echo "<td>".$row['course']."</td>";
                 echo "<td>".$row['sec']."</td>";
                 echo "<td>".$row['title']."</td>";
