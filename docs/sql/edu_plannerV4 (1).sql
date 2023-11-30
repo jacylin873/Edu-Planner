@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2023 at 06:46 PM
+-- Generation Time: Nov 29, 2023 at 11:43 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -468,7 +468,8 @@ CREATE TABLE `login_logs` (
 --
 -- Table structure for table `user_profile`
 --
--- Creation: Nov 23, 2023 at 08:40 PM
+-- Creation: Nov 29, 2023 at 10:21 PM
+-- Last update: Nov 29, 2023 at 10:20 PM
 --
 
 CREATE TABLE `user_profile` (
@@ -486,18 +487,18 @@ CREATE TABLE `user_profile` (
   `country` varchar(25) NOT NULL,
   `phone_num` varchar(25) NOT NULL,
   `clearance` int(1) NOT NULL,
-  `courses` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`courses`))
+  `classes` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user_profile`
 --
 
-INSERT INTO `user_profile` (`UPID`, `user_email`, `user_password`, `f_name`, `m_name`, `l_name`, `address1`, `address2`, `city`, `state`, `zip`, `country`, `phone_num`, `clearance`, `courses`) VALUES
-(1, 'changeme@me.com', 'hellochange', 'Change', 'F', 'Me', '13113 Here Road', 'Apt. C5', 'Johnstown', 'CA', '90210', 'USA', '555-123-9587', 0, ''),
-(2, 'angelf@gmail.com', 'helloangel', 'Angel', 'O', 'Flores', '21 Bieber St.', 'Apt. A11', 'New York City', 'New York', '50401', 'United States', '555-666-7777', 0, ''),
-(26, 'denizard@gmail.com', 'hellodenizard', 'Anthony', '', 'Denizard', '14 Zelmer Street', '', 'Bronx', 'New York', '14052', 'United States', '123-456-7777', 1, ''),
-(34, 'ramses@gmail.com', 'helloramses', 'Ramses', '', 'Terry', '21 Yardhouse Rd.', '', 'Yorktown', 'New York', '20355', 'United States', '456-968-2215', 2, '');
+INSERT INTO `user_profile` (`UPID`, `user_email`, `user_password`, `f_name`, `m_name`, `l_name`, `address1`, `address2`, `city`, `state`, `zip`, `country`, `phone_num`, `clearance`, `classes`) VALUES
+(1, 'changeme@me.com', 'hellochange', 'Change', 'F', 'Me', '13113 Here Road', 'Apt. C5', 'Johnstown', 'CA', '90210', 'USA', '555-123-9587', 0, '[]'),
+(2, 'angelf@gmail.com', 'helloangel', 'Angel', 'O', 'Flores', '21 Bieber St.', 'Apt. A11', 'New York City', 'New York', '50401', 'United States', '555-666-7777', 0, '[]'),
+(26, 'denizard@gmail.com', 'hellodenizard', 'Anthony', '', 'Denizard', '14 Zelmer Street', '', 'Bronx', 'New York', '14052', 'United States', '123-456-7777', 1, '[]'),
+(34, 'ramses@gmail.com', 'helloramses', 'Ramses', '', 'Terry', '21 Yardhouse Rd.', '', 'Yorktown', 'New York', '20355', 'United States', '456-968-2215', 2, '[]');
 
 --
 -- Indexes for dumped tables
