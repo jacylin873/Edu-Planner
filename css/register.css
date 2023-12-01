@@ -11,7 +11,7 @@ html{
 /*Setting body to take up 100% of height, flexbox, 8 pixels of padding, and adding a linear gradient background of the school's colors @Ramses*/
 body{
   align-items: center;
-  background: linear-gradient(#f58426, #013e7f);
+  background: linear-gradient(#aad3ff, #013e7f);
   display: flex;
   height: 100%;
   justify-content: center;
@@ -142,20 +142,29 @@ form input[type="radio"]{
  }
  /*Sets CSS properties of the Register button @Ramses */
 .button input{
-  background: linear-gradient(135deg, #f58426, #013e7f);
+  background: #fff;
   border: none;
   border-radius: 20px;
-  color: #FBFAF5;
+  color: #d9d9d9;
   cursor: pointer;
   font-size: 18px;
   height: 100%;
   width: 100%;
   height: 35px;
-  margin: 35px 0
+  margin: 35px 0;
+  outline-width: 8px;
+  outline-style: outset;
+  outline-color: #999;
  }
 /*Flips background color of register button when mouse is hovering over */
-.button input:hover{
-  background: linear-gradient(-135deg, #f58426, #013e7f);
+/* made to be more buttonlike @max */
+.button input:hover{ 
+  background: #fff;
+  color:#013e7f
+}
+.button input:active{
+  background-color: #888;
+  outline-style: inset;
 }
 
 

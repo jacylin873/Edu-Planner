@@ -4,23 +4,24 @@ body{
 }
 #home-img-txt-h1{
     font-size: 10vw;
-    color: #013e7f;
-    text-shadow: 1px 1px black;
- 
+    -webkit-text-stroke: 4px #013e7f;
     white-space: nowrap;
+    margin: -9px;
     overflow: hidden;
   }
 #home-img-txt-h2{
-    font-size: 8vw;
-    color: #f58426;
-    text-shadow: 1px 1px black;
+    font-size: 4vw;
+    color: darkorange;
+    /* text-shadow: 0px 2px 20px black; */
+    margin: 2px;
+    -webkit-text-stroke: 1.5px #013e7f;
 }
 .home-bg-img-div {
     position: relative;
     text-align: center;
     color: white;
-    margin-top:7vh;
-    z-index:-1;
+    z-index: 1;
+    margin: auto;
 }
 .home-bg-img-centered {
     position: absolute;

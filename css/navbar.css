@@ -18,8 +18,8 @@
    font-size:14pt;
    z-index:9999;
    display:flex;
-   justify-content:space-between;
-   align-items:center
+   justify-content: space-between;
+   align-items: flex-start;
    }
    @keyframes gradient {
       0% {
@@ -39,35 +39,52 @@
    }
    
    .nav-link {
-   display:inline-block;
-   width:100px;
-   height:55px;
-   text-align:center;
-   line-height:55px;
-   text-decoration:none;
-   margin-top:0
+      cursor: pointer;
+      /* font-size: 16px; */
+      /* border: none; */
+      /* outline: none; */
+      /* color: #fff; */
+      /* background-color: #013e7f; */
+      padding: 18px 16px;
+      /* background-color: inherit; */
+      font-family: inherit;
+      /* margin: 0; */
+      /* width: auto; */
+      /* height: auto; */
+      text-align: center;
+      text-decoration: none;
+      margin-top: 0;
+      /* width: auto; */
+      /* height: auto; */
+      /* background: linear-gradient(135deg, #ff9867, #ff7200); */
+      /* outline-style: outset; */
+      /* outline-width: thick; */
+      /* margin: 5px; */
+      /* border: 6px; */
+      color: white;
+      /* outline-color: darkorange; */
    }
-   .nav-link a{
-      color:red;
-   }
+
    
    .nav-link:hover {
-   color:#f58426;
-   cursor:pointer
+    background: white;
+      outline-color: white;
+   cursor:pointer;
+   color:#013e7f;
    }
    
    .nav-img:hover {
-      color:#f58426;
+   color:#f58426;
 
    cursor:pointer
    }
    
    .nav-img {
-   width:177px;
+   /* width:177px; */
    height:55px;
-   line-height:55px;
+   /* line-height:55px; */
    text-decoration:none;
-   display:inline-block;
+   /* display:inline-block; */
    vertical-align:middle;
    }
    
@@ -82,7 +99,7 @@
    left:0;
    font-size:14pt;
    background:linear-gradient(to top,#fac192,#f58426);
-   color:#013e7f;
+   color:white;
    text-decoration: underline;
    padding:5px;
    display:none;
@@ -91,9 +108,7 @@
    transform:translateY(100%);
    font-weight:500
    }
-   .alt-text a {
-      color: #3d85c6;
-   }
+
    
    .image-container:hover .alt-text {
    display:block;
@@ -118,22 +133,26 @@
    border:none;
    outline:none;
    color:#fff;
+   background-color: #013e7f;
    padding:14px 16px;
    background-color:inherit;
    font-family:inherit;
    margin:0;
-   width:120px;
-   height:55px;
+   width:auto;
+   height:auto;
    text-align:center;
    text-decoration:none;
    margin-top:0
    }
-   
+   .navbar{
+      background-color: #013e7f;
+   }
    .navbar a:hover,.dropdown:hover .dropbtn,.dropbtn:focus {
    background-color:#f58426
    }
    
    .dropdown-content {
+   background-color: #013e7f;
    display:none;
    position:absolute;
    background-color:#f9f9f9;
