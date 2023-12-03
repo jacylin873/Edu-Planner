@@ -129,12 +129,12 @@
    
    .dropdown .dropbtn {
    cursor:pointer;
-   font-size:16px;
+   font-size: 18px;
    border:none;
    outline:none;
    color:#fff;
    background-color: #013e7f;
-   padding:14px 16px;
+   padding: 18px 16px;
    background-color:inherit;
    font-family:inherit;
    margin:0;
@@ -148,7 +148,8 @@
       background-color: #013e7f;
    }
    .navbar a:hover,.dropdown:hover .dropbtn,.dropbtn:focus {
-   background-color:#f58426
+   background-color: #fff;
+   color: #013e7f;
    }
    
    .dropdown-content {

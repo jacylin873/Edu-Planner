@@ -11,7 +11,7 @@ body{
   }
 #home-img-txt-h2{
     font-size: 4vw;
-    color: darkorange;
+    color: darkorange; /* easier to use darkorange then a colorcode @Max*/
     /* text-shadow: 0px 2px 20px black; */
     margin: 2px;
     -webkit-text-stroke: 1.5px #013e7f;
@@ -28,4 +28,11 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+h1 content{
+    outline: #013e7f auto;
+    padding: 10px;
+    margin: 1px;
+    background: linear-gradient(0deg, #013e7f, #668BB2);
+    color: white;
 }

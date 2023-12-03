@@ -19,6 +19,7 @@
         </div>
       </div>
       <h1 class="content">Home Page</h1>
+      
           <h2>Make dropdown prettier</h2>
           <p>Some generic content and images about SUNY New Paltz</p>      
     

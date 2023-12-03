@@ -12,14 +12,21 @@ body{
 }
 .center-container {
    display: flex;
+   background: linear-gradient(0deg, black,#013e7f); /* gentle gradient @Max*/
    justify-content: center;
    overflow-x: hidden;
 }
 .side-by-side {
    display: flex;
+   /* margin: auto; */
    outline-color: black;
    outline: auto;
-   flex-direction: row-reverse;
+   /* responsiveness tweak, also preventing technical debt for a sidebar if i did this right @Max*/
+   margin: auto;
+   justify-content: space-evenly;
+   flex-direction: row;
+   padding: 20px;
+   background: linear-gradient(0deg, #668BB2,#013e7f); /* gradient inverse on hover @Max*/
 }
 
 .list {
@@ -28,8 +35,11 @@ body{
    border: auto;
    width: 40%;
    list-style: none;
+   background: white;
    margin-right: 20px;
-   /* margin: auto; */
+   margin: 2px 5px;
+   outline-color: orange; /* nice background @Max*/
+   outline-width: thick;
 }
 .major_description{
    text-align: justify; /* Horizontal centering */
