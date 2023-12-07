@@ -10,6 +10,7 @@
    width:100%;
    position:fixed;
    top:0;
+   height: 58px;
    left:0;
    background:linear-gradient(to top,#f58426,#fac192,#668BB2,#013e7f);
    background-size:400% 400%;
@@ -35,7 +36,8 @@
       }
       }
    .wrap-nav {
-   white-space:nowrap
+   white-space:nowrap;
+   display: contents;
    }
    
    .nav-link {
@@ -63,6 +65,7 @@
       /* border: 6px; */
       color: white;
       /* outline-color: darkorange; */
+      display: inline-flex;
    }
 
    
@@ -84,8 +87,9 @@
    height:55px;
    /* line-height:55px; */
    text-decoration:none;
-   /* display:inline-block; */
+   display: flex;
    vertical-align:middle;
+   justify-content: flex-start;
    }
    
    .image-container {
@@ -142,7 +146,11 @@
    height:auto;
    text-align:center;
    text-decoration:none;
-   margin-top:0
+   margin-top:0;
+   /* display: inline-flex; */
+   /* flex-wrap: nowrap; */
+   flex-direction: row;
+   align-content: center;
    }
    .navbar{
       background-color: #013e7f;

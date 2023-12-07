@@ -36,3 +36,39 @@ h1 content{
     background: linear-gradient(0deg, #013e7f, #668BB2);
     color: white;
 }
+div#filler {
+    display: block;
+    outline: auto;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    background: white;
+}
+
+div#Sidebar {
+    float: left;
+    margin: 10px;
+    outline: auto;
+    padding: 10px;
+    width: 77vmin;
+    background: linear-gradient(0deg, #013e7f,#013e7f);
+}
+h1.hp {
+    margin: auto;
+    padding: 10px;
+    color: white;
+    background: linear-gradient(0deg, steelblue, #81beff);
+    outline: darkorange 10px;
+    /* outline-style: solid; */
+    outline-width: 2px;
+    /* border-radius: 10px; */
+}
+
+div#content {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+div#Sidebar a {line-height: 1.5;background: white;padding: 3px;margin: 9px;float: left;display: contents;border-style: outset;/* width: 200px; */color: black;font-weight: bold;text-decoration: underline;-webkit-text-stroke: thin;-webkit-text-fill-color: white;}
+div#content {background: linear-gradient(to top,#668BB2,#dbedff);}

@@ -25,9 +25,9 @@
                 alt="Home"></a>
                 <div class="alt-text">Home</div>
             </div>
-            <a id="majors" class="nav-link" href="./majors.php">Majors</a>
-            <a id="one" class="nav-link one-big" href="./apply.php">Apply</a>
-            <a id="two" class="nav-link two-big" href="./login.php">Login</a>
+            <a id="majors" class="nav-link" alt="See available majors" href="./majors.php">Majors</a> 
+            <a id="one" class="nav-link one-big" alt="Apply to New Paltz" href="./apply.php">Apply</a>
+            <a id="two" class="nav-link two-big" alt="Log in or Sign Up" href="./login.php">Login</a>
             <a id="three" class="nav-link three-big" href="./staff.php">Staff</a>
             <div class="dropdown">
                 <button class="dropbtn" onclick="showDropDown()">Dropdown

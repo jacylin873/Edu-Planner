@@ -20,13 +20,13 @@ body{
    display: flex;
    /* margin: auto; */
    outline-color: black;
-   outline: auto;
+   /* outline: auto; */
    /* responsiveness tweak, also preventing technical debt for a sidebar if i did this right @Max*/
    margin: auto;
    justify-content: space-evenly;
    flex-direction: row;
    padding: 20px;
-   background: linear-gradient(0deg, #668BB2,#013e7f); /* gradient inverse on hover @Max*/
+   /* background: linear-gradient(0deg, #668BB2,#013e7f); */ /* gradient inverse on hover @Max*/
 }
 
 .list {
@@ -38,7 +38,7 @@ body{
    background: white;
    margin-right: 20px;
    margin: 2px 5px;
-   outline-color: orange; /* nice background @Max*/
+   /* outline-color: orange; */ /* nice background @Max*/
    outline-width: thick;
 }
 .major_description{
