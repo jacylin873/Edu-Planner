@@ -20,7 +20,7 @@
    z-index:9999;
    display:flex;
    justify-content: space-between;
-   align-items: flex-start;
+   align-items: center;
    }
    @keyframes gradient {
       0% {
