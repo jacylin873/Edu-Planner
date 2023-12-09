@@ -27,11 +27,11 @@
 <div class="row">
     <div class="column">
       <div class="card">
-        <img src="default_profile.png" alt="Daniel" style="width:100%">
+        <img src="danielamoruso.jpg" alt="Daniel" style="width:100%">
         <div class="container">
           <h2>Daniel Amoruso</h2>
-          <p class="title">Data Schema Designer, Webpage Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p class="title">Designer</p>
+          <p>Data Schema Designer, HTML, CSS</p>
           <p>amorusod1@newpaltz.edu</p>
         </div>
       </div>
@@ -42,7 +42,7 @@
         <img src="default_profile.png" alt="Max" style="width:100%">
         <div class="container">
           <h2>Max Zedlovich</h2>
-          <p class="title">Art Director</p>
+          <p class="title">Designer</p>
           <p>Some text that describes me lorem ipsum ipsum lorem.</p>
           <p>mike@example.com</p>
         </div>
@@ -51,12 +51,12 @@
   
     <div class="column">
       <div class="card">
-        <img src="default_profile.png" alt="Angel" style="width:100%">
+        <img src="angelflores.jpg" alt="Angel" style="width:100%">
         <div class="container">
           <h2>Angel Flores</h2>
           <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>john@example.com</p>
+          <p> Database Management, Login Page,  Class Construction, PHP</p>
+          <p>floresa31@newpaltz.edu</p>
         </div>
       </div>
     </div>
@@ -64,24 +64,24 @@
 
   <div class="column">
     <div class="card">
-      <img src="default_profile.png" alt="Max" style="width:100%">
+      <img src="jacylin.jpg" alt="Jacy" style="width:100%">
       <div class="container">
         <h2>Jacy Lin</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <p class="title">Designer</p>
+        <p>Group Leader, Gantt Chart Designer, HTML, PHP, Flowcharts</p>
+        <p>linj41@newpaltz.edu</p>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="default_profile.png" alt="Max" style="width:100%">
+      <img src="ramsesterry.png" alt="Max" style="width:100%">
       <div class="container">
-        <h2>Ramses</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <h2>Ramses Terry</h2>
+        <p class="title">Designer</p>
+        <p>CSS, HTML, PHP, Javascript, jQuery</p>
+        <p>terryr3@newpaltz.edu</p>
       </div>
     </div>
   </div>

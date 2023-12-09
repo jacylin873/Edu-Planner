@@ -28,14 +28,15 @@ if (isset($_COOKIE[$cookie_name])) {
         <form id="classSearchForm" action="search_results.php" method="post">
             <span class="user-input" style="display: inline; float: none;">Class Search</span>
             <div class="input-box">
-                <?php require('../courseDropdown.php'); ?>
+            <?php require('../courseDropdown.php'); ?>
             </div>
+            
             <div class="input-box">
                 <button type="submit" class="search-button">Search</button>
             </div>
         </form>
 
-        <h2>Display all available classes returned froms earch query</h2>
+        <h2>Display all available classes returned from each query</h2>
         <h2>Let class be clickable / make a view button<h2>
         <h2>View button should bring specific class to foreground with list of students in that class<h2>
         <h2>X button next to each student to remove them from the class</h2>

@@ -5,7 +5,7 @@
 
 Class Courses{
     private $CLID;
-    public $crn;
+    public $CRN;
     public $course;
     public $sec;
     public $title;
@@ -50,18 +50,18 @@ Class Courses{
     /**===========================================================================================================================================================================
      * Method to insert a course into the database table 'courses'
      */
-    public function insert_Course($header, $crn, $course, $sec, $title, $instructional_method, $credits, $dates, $days, $time, $loc, $instructor, $attributes, $available_seats){
+    public function insert_Course($header, $CRN, $course, $sec, $title, $instructional_method, $credits, $dates, $days, $time, $loc, $instructor, $attributes, $available_seats){
         include("includes/connect.php");
-        $sql = "INSERT INTO courses (header, crn, course, sec, title, instructional_method, credits, dates, days, time, loc, instructor, attributes, available_seats) VALUES ('$header', '$crn', '$course', '$sec', '$title', '$instructional_method', '$credits', '$dates', '$days', '$time', '$loc', '$instructor', '$attributes', '$available_seats')";
+        $sql = "INSERT INTO courses (header, CRN, course, sec, title, instructional_method, credits, dates, days, time, loc, instructor, attributes, available_seats) VALUES ('$header', '$CRN', '$course', '$sec', '$title', '$instructional_method', '$credits', '$dates', '$days', '$time', '$loc', '$instructor', '$attributes', '$available_seats')";
         $result = mysqli_query($conn, $sql);
     }   
 
     /**===========================================================================================================================================================================
      * Method to update a course into the database table 'courses'
      */
-    public function update_Course($header, $crn, $course, $sec, $title, $instructional_method, $credits, $dates, $days, $time, $loc, $instructor, $attributes, $available_seats){
+    public function update_Course($header, $CRN, $course, $sec, $title, $instructional_method, $credits, $dates, $days, $time, $loc, $instructor, $attributes, $available_seats){
         include("includes/connect.php");
-        $sql = "UPDATE courses SET header='$header', crn='$crn', course='$course', sec='$sec', title='$title', instructional_method='$instructional_method', credits='$credits', dates='$dates', days='$days', time='$time', loc='$loc', instructor='$instructor', attributes='$attributes', available_seats='$available_seats' WHERE CLID='$CLID'";
+        $sql = "UPDATE courses SET header='$header', CRN='$CRN', course='$course', sec='$sec', title='$title', instructional_method='$instructional_method', credits='$credits', dates='$dates', days='$days', time='$time', loc='$loc', instructor='$instructor', attributes='$attributes', available_seats='$available_seats' WHERE CLID='$CLID'";
         $result = mysqli_query($conn, $sql);
     }
 
@@ -93,11 +93,23 @@ Class Courses{
     }
 
     /**===========================================================================================================================================================================
+     * Method to to display all subjects in a dropdown menu
+     */
+     public function display_Subjects(){
+        include("../includes/connect.php");
+        $sql = "SELECT * FROM course_subjects";
+        $result = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_assoc($result)){
+            echo "<option value='".$row['SUBID']."'>".$row['CRN_value']." - ".$row['subjects']."</option>";
+        }
+        }
+
+    /**===========================================================================================================================================================================
      * Method to view a course in database table 'courses' using CRN
      */
-    public function view_Course_By_CRN($crn){
+    public function view_Course_By_CRN($CRN){
         include("includes/connect.php");
-        $sql = "SELECT * FROM courses WHERE crn='$crn'";
+        $sql = "SELECT * FROM courses WHERE CRN='$CRN'";
         $result = mysqli_query($conn, $sql);
     }
 
@@ -165,7 +177,7 @@ Class Courses{
             while($row = mysqli_fetch_assoc($result)){
                 echo "<tr>";
                 echo "<td>".$row['header']."</td>";
-                echo "<td>".$row['crn']."</td>";
+                echo "<td>".$row['CRN']."</td>";
                 echo "<td>".$row['course']."</td>";
                 echo "<td>".$row['sec']."</td>";
                 echo "<td>".$row['title']."</td>";

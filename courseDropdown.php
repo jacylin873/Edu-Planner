@@ -4,10 +4,10 @@ $user_array;
 if (isset($_COOKIE[$cookie_name])) {
     $serializedData = $_COOKIE[$cookie_name];
     $user_array = unserialize($serializedData);
-    
+
 
     if ($user_array['clearance'] == (0) | $user_array['clearance'] == (1) | $user_array['clearance'] == (2)  )  {
-        
+
         ?>
 <!DOCTYPE html>
 <html>
