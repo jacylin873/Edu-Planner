@@ -10,7 +10,7 @@
    width:100%;
    position:fixed;
    top:0;
-   height: 58px;
+   height: 60px;
    left:0;
    background:linear-gradient(to top,#f58426,#fac192,#668BB2,#013e7f);
    background-size:400% 400%;
@@ -42,29 +42,11 @@
    
    .nav-link {
       cursor: pointer;
-      /* font-size: 16px; */
-      /* border: none; */
-      /* outline: none; */
-      /* color: #fff; */
-      /* background-color: #013e7f; */
-      padding: 18px 16px;
-      /* background-color: inherit; */
+      padding: 16px 16px;
       font-family: inherit;
-      /* margin: 0; */
-      /* width: auto; */
-      /* height: auto; */
       text-align: center;
       text-decoration: none;
-      margin-top: 0;
-      /* width: auto; */
-      /* height: auto; */
-      /* background: linear-gradient(135deg, #ff9867, #ff7200); */
-      /* outline-style: outset; */
-      /* outline-width: thick; */
-      /* margin: 5px; */
-      /* border: 6px; */
       color: white;
-      /* outline-color: darkorange; */
       display: inline-flex;
    }
 

@@ -31,10 +31,75 @@ body {
     float: left;
     width: 15%;
     padding: 0 8px;
+    color: black;
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    outline: darkorange outset 5px;
 }
 
 .card {
     background-color: white;
     text-align: center;
 }
-  
+
+img {
+    width: -webkit-fill-available;
+    height: 12em;
+    /* margin: 22px; */
+    /* padding: 10px; */
+    /* float: left; */
+    /* align-self: center; */
+}
+
+.row {
+    display: flow-root;
+}
+
+.container {
+    /* width: 10em; */
+    justify-content: center;
+    display: block;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-block-size: 100px;
+}
+
+img {
+    width: -webkit-fill-available;
+    height: 12em;
+    /* margin: 22px; */
+    /* padding: 10px; */
+    /* float: left; */
+    /* align-self: center; */
+}
+
+.container {
+    /* width: 10em; */
+    /* color: beige; */
+    justify-content: center;
+    display: block;
+}
+
+.row {
+    /* background: white; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-block-size: 100px;
+    /* padding: 10px; */
+    /* margin: 20px; */
+}
+
+p {
+    /* margin: 5px; */
+    /* padding: 5px; */
+}
