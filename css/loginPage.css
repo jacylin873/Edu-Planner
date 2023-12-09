@@ -182,3 +182,7 @@ body {
     bottom: 100%;
   }
 }
+input {
+  color: white;
+  background: #013e7f;
+}

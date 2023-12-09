@@ -1,6 +1,6 @@
 <?php
 class User
-{ //here we go!
+{ //max
     static public $classcount = 0;
     public $name;
     public $UUID;

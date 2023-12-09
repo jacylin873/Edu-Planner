@@ -10,16 +10,17 @@
    width:100%;
    position:fixed;
    top:0;
+   height: 58px;
    left:0;
-   background:linear-gradient(to left,#f58426,#013e7f,#f58426,#013e7f);
+   background:linear-gradient(to top,#f58426,#fac192,#668BB2,#013e7f);
    background-size:400% 400%;
    animation:gradient 15s linear infinite;
    font-family:Helvetica,Arial,sans-serif;
-   font-size:15px;
+   font-size:14pt;
    z-index:9999;
    display:flex;
-   justify-content:space-between;
-   align-items:center
+   justify-content: space-between;
+   align-items: flex-start;
    }
    @keyframes gradient {
       0% {
@@ -35,36 +36,60 @@
       }
       }
    .wrap-nav {
-   white-space:nowrap
+   white-space:nowrap;
+   display: contents;
    }
    
    .nav-link {
-   display:inline-block;
-   width:100px;
-   height:55px;
-   color:#fff;
-   text-align:center;
-   line-height:55px;
-   text-decoration:none;
-   margin-top:0
+      cursor: pointer;
+      /* font-size: 16px; */
+      /* border: none; */
+      /* outline: none; */
+      /* color: #fff; */
+      /* background-color: #013e7f; */
+      padding: 18px 16px;
+      /* background-color: inherit; */
+      font-family: inherit;
+      /* margin: 0; */
+      /* width: auto; */
+      /* height: auto; */
+      text-align: center;
+      text-decoration: none;
+      margin-top: 0;
+      /* width: auto; */
+      /* height: auto; */
+      /* background: linear-gradient(135deg, #ff9867, #ff7200); */
+      /* outline-style: outset; */
+      /* outline-width: thick; */
+      /* margin: 5px; */
+      /* border: 6px; */
+      color: white;
+      /* outline-color: darkorange; */
+      display: inline-flex;
    }
+
    
    .nav-link:hover {
-   cursor:pointer
+    background: white;
+      outline-color: white;
+   cursor:pointer;
+   color:#013e7f;
    }
    
    .nav-img:hover {
+   color:#f58426;
+
    cursor:pointer
    }
    
    .nav-img {
-   width:177px;
+   /* width:177px; */
    height:55px;
-   line-height:55px;
+   /* line-height:55px; */
    text-decoration:none;
-   display:inline-block;
+   display: flex;
    vertical-align:middle;
-   margin-right:50px
+   justify-content: flex-start;
    }
    
    .image-container {
@@ -76,9 +101,10 @@
    position:absolute;
    bottom:0;
    left:0;
-   background-color:#f58426;
-   color:#013e7f;
-   font-size:2vw;
+   font-size:14pt;
+   background:linear-gradient(to top,#fac192,#f58426);
+   color:white;
+   text-decoration: underline;
    padding:5px;
    display:none;
    width:167px;
@@ -86,6 +112,7 @@
    transform:translateY(100%);
    font-weight:500
    }
+
    
    .image-container:hover .alt-text {
    display:block;
@@ -106,57 +133,62 @@
    
    .dropdown .dropbtn {
    cursor:pointer;
-   font-size:16px;
+   font-size: 18px;
    border:none;
    outline:none;
    color:#fff;
-   padding:14px 16px;
+   background-color: #013e7f;
+   padding: 18px 16px;
    background-color:inherit;
    font-family:inherit;
    margin:0;
-   width:120px;
-   height:55px;
-   color:#fff;
+   width:auto;
+   height:auto;
    text-align:center;
    text-decoration:none;
-   margin-top:0
+   margin-top:0;
+   /* display: inline-flex; */
+   /* flex-wrap: nowrap; */
+   flex-direction: row;
+   align-content: center;
    }
-   
+   .navbar{
+      background-color: #013e7f;
+   }
    .navbar a:hover,.dropdown:hover .dropbtn,.dropbtn:focus {
-   background-color:#f58426
+   background-color: #fff;
+   color: #013e7f;
    }
    
    .dropdown-content {
+   background-color: #013e7f;
    display:none;
    position:absolute;
    background-color:#f9f9f9;
-   width:120px;
+   width:80px;
    box-shadow:1px 1px 1px 1px #0003;
    z-index:10
    }
    
    .dropdown-content a {
    float:none;
-   color:#000;
-   padding:12px 16px;
+   color:#fff;
+   padding:12px 11px;
    text-decoration:none;
    display:block;
-   text-align:left
+   text-align:left;
+   background:linear-gradient(to left,#668BB2,#013e7f);
    }
-   
    .dropdown-content a:hover {
-   background-color:#ddd;
-   width:89px
+      
+      background:linear-gradient(to top,#fac192,#f58426);
+      color:#013e7f;
+   width:80px;
    }
-   
    .show {
    display:block
    }
    
-
-
-
-
 
    @media only screen and (min-width: 630px) {
       .dropbtn {

@@ -11,9 +11,8 @@
     position:fixed;
     top:0;
     left:0;
-    background:linear-gradient(to left,#f58426,#013e7f,#f58426,#013e7f);
+    background:linear-gradient(to top,#f58426,#fac192,#668BB2,#013e7f);
     background-size:400% 400%;
-    animation:gradient 15s linear infinite;
     font-family:Helvetica,Arial,sans-serif;
     font-size:15px;
     z-index:9999;
@@ -40,21 +39,22 @@
     
     .nav-link {
     display:inline-block;
-    width:150px;
-    height:7vh;
+   width:auto;
+   padding: 10px;
+   height:auto;
     color:#fff;
     text-align:center;
-    line-height:7vh;
+    line-height:5vh;
     text-decoration:none;
     margin-top:0
     }
     .nav-link h3 {
         display:inline-block;
         width:150px;
-        height:7vh;
+        height:auto;
         color:#fff;
         text-align:center;
-        line-height:7vh;
+        line-height:auto;
         text-decoration:none;
         margin-top:0
         }
@@ -72,7 +72,8 @@
     .dropdown {
     float:right;
     overflow:hidden;
-    line-height:7vh
+    line-height:5vh;
+    background-color: #013e7f;
     }
     
     .dropdown .dropbtn {
@@ -84,16 +85,17 @@
     padding:14px 16px;
     background-color:inherit;
     font-family:inherit;
-    margin:0;
     width:150px;
-    height:7vh;
+    height:auto;
     color:#fff;
     text-align:center;
     text-decoration:none;
     margin-top:0
     }
-    
-    .navbar a:hover,.dropdown:hover .dropbtn,.dropbtn:focus {
+    a{
+        background-color: #013e7f;
+    }
+    a:hover,.dropdown:hover .dropbtn,.dropbtn:focus {
     background-color:#f58426;
     }
     
@@ -124,7 +126,7 @@
     display:block
     }
     .Main-Content{
-        margin-top: 7vh;
+        margin-top: 2vh;
     }
     
  
