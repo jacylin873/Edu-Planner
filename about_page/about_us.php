@@ -76,12 +76,12 @@
 
   <div class="column">
     <div class="card">
-      <img src="default_profile.png" alt="Max" style="width:100%">
+      <img src="ramsesterry.png" alt="Max" style="width:100%">
       <div class="container">
-        <h2>Ramses</h2>
+        <h2>Ramses Terry</h2>
         <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <p>CSS, HTML, PHP, Javascript, jQuery</p>
+        <p>terryr3@newpaltz.edu</p>
       </div>
     </div>
   </div>
