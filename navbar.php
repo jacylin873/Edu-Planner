@@ -13,7 +13,6 @@
             <div class="image-container">
                 <a id="home" class="nav-img" href="./index.php"><img class="nav-img" src="./img/newpaltzlogo.jpg"
                 alt="Home"></a>
-                <div class="alt-text">Home</div>
             </div>
             <a id="majors" class="nav-link" href="./majors.php">Majors</a>
             <a id="one" class="nav-link one-big" href="./apply.php">Apply</a>

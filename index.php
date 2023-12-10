@@ -24,12 +24,14 @@
     <h1 class="hp">Home Page</h1>
     <div id="content">
       <div id="Sidebar">
+        <a href="#ourmission">Our Mission</a><br />
         <a href="#highlights">Highlights</a><br />
         <a href="#campusgoals">Campus Goals</a><br />
         <a href="#studentgoals">Student Goals</a><br />
         <a href="#opportunities">Opportunities</a><br />
       </div>
       <div id="filler">
+        <h2 id="ourmission">Our Mission</h2>
         <p>Creating a vibrant intellectual/creative public forum: Reflecting and celebrating the diversity of our society and encouraging and supporting active participation in scholarly and artistic activity.</p>
         <p>Contributing to the community: Being an active contributor to the schools, community institutions and economic/cultural life of our region.</p>
         <p>Admitting promising students: Selecting and admitting students who show promise of thriving in a learning environment which is challenging, student-centered, and personalized.</p>

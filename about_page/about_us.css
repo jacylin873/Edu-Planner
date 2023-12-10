@@ -18,6 +18,8 @@ h2 {
     font-size: 40px;
     text-align: center;
     color: darkorange;
+        /* max */
+
 }
 
 body {
@@ -27,7 +29,7 @@ body {
     background-size: cover;
 }
 
-.column {
+.column { 
     float: left;
     width: 15%;
     padding: 0 8px;
@@ -49,7 +51,7 @@ img {
     /* margin: 22px; */
     /* padding: 10px; */
     /* float: left; */
-    /* align-self: center; */
+    /* max */
 }
 
 .row {
@@ -58,6 +60,8 @@ img {
 
 .container {
     /* width: 10em; */
+        /* max */
+
     justify-content: center;
     display: block;
 }
@@ -78,11 +82,13 @@ img {
     /* padding: 10px; */
     /* float: left; */
     /* align-self: center; */
+        /* max */
+
 }
 
 .container {
     /* width: 10em; */
-    /* color: beige; */
+    /* max */
     justify-content: center;
     display: block;
 }
@@ -97,9 +103,4 @@ img {
     min-block-size: 100px;
     /* padding: 10px; */
     /* margin: 20px; */
-}
-
-p {
-    /* margin: 5px; */
-    /* padding: 5px; */
 }
