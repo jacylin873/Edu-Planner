@@ -37,12 +37,12 @@
     </div>
 
     <div class="column">
-      <img src="default_profile.png" alt="Max">
+      <img src="maxzedlovich.jpg" alt="Max">
       <div class="container">
         <h2>Max Zedlovich</h2>
         <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <p>Css, class construction, Html, Php, Home page, css fixes, ada compliance checking, responsive html integration</p>
+        <p>zedlovim1@newpaltz.edu</p>
       </div>
     </div>
 
