@@ -29,9 +29,9 @@ body {
     background-size: cover;
 }
 
-.column { 
+.column {
     float: left;
-    width: 15%;
+    width: 12em;
     padding: 0 8px;
     color: black;
     background: white;
@@ -76,14 +76,14 @@ img {
 }
 
 img {
-    width: -webkit-fill-available;
+    width: 12em;
     height: 12em;
     /* margin: 22px; */
     /* padding: 10px; */
     /* float: left; */
     /* align-self: center; */
         /* max */
-
+    /* display: block; */
 }
 
 .container {
@@ -99,7 +99,7 @@ img {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     min-block-size: 100px;
     /* padding: 10px; */
     /* margin: 20px; */
