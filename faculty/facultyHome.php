@@ -20,6 +20,7 @@ if (isset($_COOKIE[$cookie_name])) {
             </div>
     </body>
 </html>
+<?php require('../loggedFooter.php'); ?>
         <?php 
     }
 }
