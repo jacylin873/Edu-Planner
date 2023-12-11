@@ -26,6 +26,7 @@ if (isset($_COOKIE[$cookie_name])) {
                 <h2>Unenroll button that deletes user from system</h2>
             </div>
     </body>
+    <?php require('../loggedFooter.php'); ?>
         </html>
         <?php 
     }

@@ -23,6 +23,7 @@ if (isset($_COOKIE[$cookie_name])) {
                 <h1>Welcome, student! Here is where you can view your schedule and add new classes to your schedule.</h1>    
             </div>
     </body>
+    <?php require('../loggedFooter.php'); ?>
         </html>
         <?php 
     }

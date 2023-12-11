@@ -73,5 +73,4 @@ if (isset($_COOKIE[$cookie_name])) {
 
     <script src="navbar.js"></script>
    </body>
-
 </html>

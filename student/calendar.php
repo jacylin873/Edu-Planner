@@ -130,7 +130,7 @@ if (isset($_COOKIE[$cookie_name])) {
                 ?>
             </div>
         </body>
-
+        <?php require('../loggedFooter.php'); ?>
         </html>
         <?php
     }

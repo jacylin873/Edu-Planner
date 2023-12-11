@@ -344,5 +344,5 @@
 
     <script src="navbar.js"></script>
    </body>
-
+   <?php require('./footer.php'); ?>
 </html>
