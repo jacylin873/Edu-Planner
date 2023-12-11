@@ -14,23 +14,22 @@ if (isset($_COOKIE[$cookie_name])) {
 <!DOCTYPE html>
 <html>
    <head>
+    <link rel="stylesheet" href="../css/admin/adminHome.css">
       <meta charset="utf-8">
-      <title>SUNY NP Faculty Home</title>
+      <title>Admin Page</title>
    </head>
    <body>
    <?php require('./navbar.php'); ?>
     <div class="Main-Content">
-        <br> </br>
-        <h1>Hello,  you are an admin user. You can use this website to create new users, view faculty members and add new courses.</h1>    
-    </div>
-           
-    
+        <h1>Hello,  you are an admin user. </h1>
+        <h2>You can use this website to create new users, view faculty members and add new courses. </h2>
+    </div>       
     <script src="../navbar.js"></script>
     </body>
-    <?php require('../loggedFooter.php'); ?>
         </html>
-        <?php 
+        <?php
     }
+    
 }
 else{
     header("Location: ../login.php");
