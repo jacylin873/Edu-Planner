@@ -95,6 +95,33 @@ if (isset($_COOKIE[$cookie_name])) {
                         <input type="text" placeholder="Enter the classroom location" id="loc" name="loc" required>
                     </div>
                     <div class="input-box">
+                        <span class="user-input">Days</span>
+                        <select class="formDropdown" id="days" name="days" required>
+                            <option value="">Select a start time:</option>
+                            <option value="M">M</option>
+                            <option value="T">T</option>
+                            <option value="W">W</option>
+                            <option value="R">R</option>
+                            <option value="F">F</option>
+                            <option value="S">S</option>
+                            <option value="MT">MT</option>
+                            <option value="MW">MW</option>
+                            <option value="MR">MR</option>
+                            <option value="MF">MF</option>
+                            <option value="MS">MS</option>
+                            <option value="TW">TW</option>
+                            <option value="TR">TR</option>
+                            <option value="TF">TF</option>
+                            <option value="TS">TS</option>
+                            <option value="WR">WR</option>
+                            <option value="WF">WF</option>
+                            <option value="WS">WS</option>
+                            <option value="RF">RF</option>
+                            <option value="RS">RS</option>
+                            <option value="FS">FS</option>
+                        </select>
+                    </div> 
+                    <div class="input-box">
                         <span class="user-input">Class Start Time</span>
                         <select class="formDropdown" id="start_time" name="start_time" required>
                             <option value="">Select a start time:</option>

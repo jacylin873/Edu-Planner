@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $start_day=$_POST["start_day"];
     $start_month=$_POST["start_month"];
     $end_day=$_POST["end_day"];
+    $days=$_POST["days"]; 
     $end_month=$_POST["end_month"];
     $available_seats=$_POST["available_seats"];
     $timerParts = explode(":", $timer);
@@ -74,12 +75,12 @@ function isNumberUnique($number, $conn) {
 do {
     $randomNumber = generateRandomNumber();
 } while (!isNumberUnique($randomNumber, $conn));
-$sql = "INSERT INTO courses (header, CRN, course, sec, title, instructional_method, credits, days, time, loc, instructor, attributes, available_seats) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO courses (header, CRN, course, sec, title, instructional_method, credits, dates,days, time, loc, instructor, attributes, available_seats) VALUES (?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt,$sql)){
     die(mysqli_error($conn));
 }
-mysqli_stmt_bind_param($stmt,"ssssssissssss",$header, $randomNumber, $courseFull, $sec , $title, $instructionalMethod, $credits, $dates, $time, $loc, $instructor, $attributes, $available_seats);
+mysqli_stmt_bind_param($stmt,"ssssssisssssss",$header, $randomNumber, $courseFull, $sec , $title, $instructionalMethod, $credits, $dates,$days, $time, $loc, $instructor, $attributes, $available_seats);
 mysqli_stmt_execute($stmt);
 echo '<script>alert("Submission successful")</script>'; 
 mysqli_close($conn);
