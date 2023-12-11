@@ -23,7 +23,7 @@
         <!--Divider for input of: User's password @Ramses-->
           <div class="input-box">
             <span class="user-input">Password</span>
-            <input type="text" placeholder="Enter a password" id="password" name="password" required>
+            <input type="password" placeholder="Enter a password" id="password" name="password" required>
           </div>
           <div class="input-box">
         <!--Divider for input of: User's first name @Ramses-->
