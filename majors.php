@@ -21,154 +21,23 @@
         <div class="side-by-side">
             <ul class="list" id="majors-list">
                 <h2>Majors</h2>
-                <li>Accounting</li>
-                <li>Adolescence Education</li>
-                <li>Anthropology</li>
-                <li>Art History</li>
-                <li>Asian Studies</li>
-                <li>Astronomy</li>
-                <li>Biochemistry</li>
-                <li>Biology</li>
-                <li>Black Studies</li>
-                <li>Business Analytics</li>
-                <li>Ceramics</li>
-                <li>Chemistry</li>
-                <li>Communication Disorders</li>
-                <li>Communication Studies</li>
-                <li>Computer Engineering</li>
-                <li>Computer Science</li>
-                <li>Digital Media Production</li>
-                <li>Digital Media Programming & Management</li>
-                <li>Early Childhood & Childhood Education</li>
-                <li>Early Childhood Studies (non-certification program)</li>
-                <li>Economics</li>
-                <li>Electrical Engineering</li>
-                <li>English</li>
-                <li>Entrepreneurship</li>
-                <li>Environmental Science</li>
-                <li>Environmental Studies</li>
-                <li>Finance</li>
-                <li>French</li>
-                <li>General Business</li>
-                <li>Geography</li>
-                <li>Geology</li>
-                <li>Graphic Design</li>
-                <li>History</li>
-                <li>International Business</li>
-                <li>International Relations</li>
-                <li>Journalism</li>
-                <li>Latin American, Caribbean & Latinx Studies</li>
-                <li>Management</li>
-                <li>Marketing</li>
-                <li>Mathematics</li>
-                <li>Mechanical Engineering</li>
-                <li>Metal</li>
-                <li>Music</li>
-                <li>Painting</li>
-                <li>Philosophy</li>
-                <li>Photography</li>
-                <li>Physics</li>
-                <li>Political Science</li>
-                <li>Printmaking</li>
-                <li>Psychology</li>
-                <li>Sculpture</li>
-                <li>Sociology</li>
-                <li>Spanish</li>
-                <li>Theatre Arts</li>
-                <li>Visual Arts</li>
-                <li>Visual Arts Education</li>
-                <li>Women's, Gender, and Sexuality Studies</li>
+                <?php
+                include("classes/majorMinorClass.php");
+                $majorMinor = new MajorMinor();
+                $majorMinor->print_Majors();
+                ?>
 
                 <h2>Interdisciplinary Majors</h2>
-                <li>Asian Studies</li>
-                <li>Environmental Science</li>
-                <li>Environmental Studies</li>
-                <li>General Studies (degree-completion program, available fully online)</li>
-                <li>International Relations</li>
-                <li>Latin American, Caribbean & Latinx Studies</li>
-                <li>Women's, Gender & Sexuality Studies</li>
+                <?php $majorMinor->print_Interdisciplinary_Majors(); ?>
             </ul>
             <ul class="list">
                 <h2>Minors</h2>
-                <li>Adolescence Education</li>
-                <li>Ancient World Studies</li>
-                <li>Anthropology</li>
-                <li>Applied Mathematics</li>
-                <li>Art History</li>
-                <li>Art Studio</li>
-                <li>Asian Studies</li>
-                <li>Asian American Studies - NEW</li>
-                <li>Astronomy</li>
-                <li>Audio Engineering</li>
-                <li>Biology</li>
-                <li>Black Studies</li>
-                <li>Business</li>
-                <li>Business Analytics</li>
-                <li>Chemistry</li>
-                <li>Communication Studies</li>
-                <li>Computer Science</li>
-                <li>Creative Writing</li>
-                <li>Deaf Studies</li>
-                <li>Digital Design & Fabrication</li>
-                <li>Disaster Studies</li>
-                <li>Economics</li>
-                <li>Engineering</li>
-                <li>English</li>
-                <li>Environmental Science</li>
-                <li>Environmental Studies</li>
-                <li>Evolutionary Studies</li>
-                <li>Film & Video Studies</li>
-                <li>French</li>
-                <li>Geography</li>
-                <li>Geology</li>
-                <li>German</li>
-                <li>History</li>
-                <li>Industrial & Organizational Psychology</li>
-                <li>International Relations</li>
-                <li>Italian Studies</li>
-                <li>Jewish Studies</li>
-                <li>Journalism</li>
-                <li>Latin American, Caribbean & Latinx Studies</li>
-                <li>Law & Politics</li>
-                <li>Linguistics</li>
-                <li>Mathematics</li>
-                <li>Medieval and Early Modern Studies</li>
-                <li>Music</li>
-                <li>Native American Studies</li>
-                <li>Philosophy</li>
-                <li>Physics</li>
-                <li>Political Science</li>
-                <li>Psychology</li>
-                <li>Religious Studies</li>
-                <li>Social Justice Educational Studies</li>
-                <li>Sociology</li>
-                <li>Spanish</li>
-                <li>Theatre Arts</li>
-                <li>Urban Planning</li>
-                <li>Women's, Gender, and Sexuality Studies</li>
+                <?php $majorMinor->print_Minors(); ?>
                 <li>&nbsp;</li>
 
                 <h2>Interdisciplinary Minors</h2>
-                <li>Ancient World Studies</li>
-                <li>Asian Studies</li>
-                <li>Audio Engineering - NEW</li>
-                <li>Deaf Studies</li>
-                <li>Digital Design & Fabrication</li>
-                <li>Disaster Studies</li>
-                <li>Environmental Science</li>
-                <li>Environmental Studies</li>
-                <li>Evolutionary Studies</li>
-                <li>Film & Video Studies</li>
-                <li>International Relations</li>
-                <li>Italian Studies</li>
-                <li>Jewish Studies</li>
-                <li>Latin American, Caribbean & Latinx Studies</li>
-                <li>Law & Politics</li>
-                <li>Linguistics</li>
-                <li>Medieval and Early Modern Studies</li>
-                <li>Native American Studies</li>
-                <li>Religious Studies</li>
-                <li>Women's, Gender & Sexuality Studies</li>
+                <?php $majorMinor->print_Interdisciplinary_Minors(); ?>
+                <br>
             </ul>
         </div>
     </div>
