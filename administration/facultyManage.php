@@ -1,3 +1,9 @@
+<?php
+include("../includes/connect.php");
+$sqlSubjects = "SELECT * FROM course_subjects";
+$resultSubjects = $conn->query($sqlSubjects);
+if ($resultSubjects->num_rows > 0) {
+?>
 <?php 
 session_start();
 $cookie_name = "eduPlanner_logged_user";
@@ -5,11 +11,7 @@ $user_array;
 if (isset($_COOKIE[$cookie_name])) {
     $serializedData = $_COOKIE[$cookie_name];
     $user_array = unserialize($serializedData);
-    
-    // Now, $arrayData contains the original array.
-
     if ($user_array['clearance'] == 0)  {
-
         ?>
 <!DOCTYPE html>
 <html>
@@ -17,37 +19,65 @@ if (isset($_COOKIE[$cookie_name])) {
       <meta charset="utf-8">
       <title>SUNY NP Faculty Home</title>
       <link rel="stylesheet" href="../css/userNavbar.css">
+      <link rel="stylesheet" href="../css/admin/createClassForm.css">
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <link rel="stylesheet" href="./facultyManage.css">
    </head>
    <body>
    <?php require('./navbar.php'); ?>
 
     <div class="Main-Content">
-        <h1>Page to manage faculty</h1>
-        <h2>Subject dropdown and then search button</h2>
-        <h3>Requires we add subject to user_Table, good to have to display student's major anyway</h3>
-        <form id="classSearchForm" action="search_results.php" method="post">
-            <span class="user-input" style="display: inline; float: none;">Faculty Search</span>
-            <div class="input-box">
-                <?php require('../courseDropdown.php'); ?>
+        <div id="Apply-Div">
+            <div class="container"> 
+            <div class="title">
+                Faculty Member Search
             </div>
-            <br>
-            <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName">
-            <br>
-            <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName">
-            <br>
-            <div class="input-box">
-                <button type="submit" class="search-button">Search</button>
+            <div class="content">
+                <form action="facultyManageFunction.php" method="post"> 
+                <div class="user-information">
+                    <div class="input-box search-by-name" id="f_name">
+                         <span for="f_name" class="user-input">First Name:</span>
+                         <input type="text" placeholder="Enter the faculty member's first name" id="f_name" name="f_name" required>
+                    </div>
+                    
+                    <div class="input-box search-by-name" id="l_name">
+                        <span for="l_name" class="user-input">Last Name:</span>
+                        <input type="text" placeholder="Enter the faculty member's last name" id="l_name" name="l_name" required>
+                    </div>
+
+                </div>
+                <div class="button">
+                    <input type="submit" value="View">
+                </div>
+                </form>
             </div>
-        </form>
-        <h2>Search button queries the subject value but also makes sure clearence is set to faculty (1)</h2>
-        <h2>Have the faculty members be clickable or have a "View" button </h2>
-        <h2>View button should bring up faculty member details and a query of all classes they are the professor of </h2>
-        <h3>Also allow a dismiss button with a "Are you sure" radio to fire a faculty member and remove from DB</h3>    
-    </div>
-           
-    
+            </div>
+
+
+        </div>
+        <div class="Table-Content">
+            <div id="result"></div>
+        </div>
+    <script>
+        $('form').submit(function (event) {
+            event.preventDefault(); 
+
+            var formData = $(this).serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'facultyManageFunction.php',
+                data: formData,
+                success: function (response) {
+
+                    $('#result').html(response);
+                },
+                error: function () {
+                    alert('An error occurred during the AJAX request.');
+                }
+            });
+        });
+    </script>
+
     
     <script src="../navbar.js"></script>
     </body>
@@ -59,4 +89,11 @@ else{
     header("Location: ../login.php");
     exit();
 }
+?>
+<?php
+} else {
+    echo "No data found in the course_subjects table.";
+}
+
+$conn->close();
 ?>

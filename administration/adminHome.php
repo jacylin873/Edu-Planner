@@ -21,7 +21,7 @@ if (isset($_COOKIE[$cookie_name])) {
    <body>
    <?php require('./navbar.php'); ?>
     <div class="Main-Content">
-        <h1>Hello,  You are a admin!</h1>    
+        <h1>Hello,  you are an admin user. You can use this website to create new users, view faculty members and add new courses.</h1>    
     </div>
            
     

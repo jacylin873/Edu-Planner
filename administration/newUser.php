@@ -80,7 +80,7 @@ if (isset($_COOKIE[$cookie_name])) {
           </div>
         <!--Divider for input of: User's country of residence @Ramses-->
           <div class="input-box">
-          <span class="user-input" style="display: inline; float: none;">Country Name</span>
+            <span class="user-input" style="display: inline; float: none;">Country Name</span>
           <select id="country" name="country" class="countries" >
                 <?php
                 include("../includes/connect.php");
@@ -89,8 +89,7 @@ if (isset($_COOKIE[$cookie_name])) {
                 while($row = mysqli_fetch_assoc($result)){
                     echo "<option value='".$row['CTID']."'>".$row['country_name']."</option>";
                 }
-                ?>
-            </select>
+                ?></select>
           </div>
         <!--Divider for input of: User's phone number @Ramses-->
           <div class="input-box">
