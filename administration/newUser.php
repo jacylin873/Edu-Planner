@@ -16,7 +16,6 @@ if (isset($_COOKIE[$cookie_name])) {
    <head>
       <meta charset="utf-8">
       <title>SUNY NP Faculty Home</title>
-      <link rel="stylesheet" href="../css/userNavbar.css">
       <?php echo '<link rel="stylesheet" type="text/css" href="../css/register.css"></head>'; ?>
    </head>
    <body>

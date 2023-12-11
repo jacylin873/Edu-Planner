@@ -15,7 +15,7 @@ if (isset($_COOKIE[$cookie_name])) {
    <head>
       <meta charset="utf-8">
       <title>SUNY NP Faculty Home</title>
-      <link rel="stylesheet" href="../css/userNavbar.css">
+      <link rel="stylesheet" href="../css/admin/userNavbar.css">
    </head>
    <body>
    <nav id="topnav">
@@ -23,9 +23,9 @@ if (isset($_COOKIE[$cookie_name])) {
         <a id="majors" class="nav-link" href=""> <h3>Admin: <?php echo $user_array['f_name'];?></h3></a>
         <a id="one" class="nav-link one-big" href="./AdminHome.php">Home</a>
         <a id="two" class="nav-link two-big" href="./newUser.php">Create User</a>
-        <a id="four" class="nav-link four-big" href="./facultyManage.php">Manage Faculty</a>
-        <a id="five" class="nav-link five-big" href="./classManage.php">Manage Classes</a>
-        <a id="six" class="nav-link six-big" href="../logout.php">Logout</a>
+        <a id="three" class="nav-link three-big" href="./facultyManage.php">Manage Faculty</a>
+        <a id="four" class="nav-link four-big" href="./classManage.php">Manage Classes</a>
+        <a id="five" class="nav-link five-big" href="../logout.php">Logout</a>
         <div class="dropdown">
             <button class="dropbtn" onclick="showDropDown()" >Dropdown
               <i class="fa fa-caret-down"></i>
@@ -52,6 +52,7 @@ if (isset($_COOKIE[$cookie_name])) {
             </div>
         </div>
     </nav>
+    <script src="../navbar.js"></script>
     </body>
     </html>
         <?php 

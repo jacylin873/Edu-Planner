@@ -12,12 +12,11 @@ if (isset($_COOKIE[$cookie_name])) {
    <head>
       <meta charset="utf-8">
       <title>SUNY NP Faculty Home</title>
-      <link rel="stylesheet" href="../css/userNavbar.css">
    </head>
    <body>
         <?php require('./navbar.php'); ?>
             <div class="Main-Content">
-                <h1>Hello,  You are a faculty member!</h1>    
+                <h1>Hello,  faculty member! Here is where you can view all your classes and sign up to instruct new classes.</h1>    
             </div>
     </body>
 </html>

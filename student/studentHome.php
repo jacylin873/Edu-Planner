@@ -20,7 +20,7 @@ if (isset($_COOKIE[$cookie_name])) {
    <body>
    <?php require('./navbar.php'); ?>
             <div class="Main-Content">
-                <h1>Hello,  You are a student!</h1>    
+                <h1>Welcome, student! Here is where you can view your schedule and add new classes to your schedule.</h1>    
             </div>
     </body>
         </html>

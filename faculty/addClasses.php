@@ -18,7 +18,6 @@ if (isset($_COOKIE[$cookie_name])) {
 <head>
     <meta charset="utf-8">
     <title>SUNY NP Faculty Home</title>
-    <link rel="stylesheet" href="../css/userNavbar.css">
     <link rel="stylesheet" href="../css/faculty/createClassForm.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
