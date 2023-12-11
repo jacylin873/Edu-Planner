@@ -11,7 +11,7 @@ if (isset($_COOKIE[$cookie_name])) {
    <head>
       <meta charset="utf-8">
       <title>SUNY NP Faculty Home</title>
-      <link rel="stylesheet" href="../css/userNavbar.css">
+      <link rel="stylesheet" href="../css/student/userNavbar.css">
    </head>
    <body>
         <nav id="topnav">
