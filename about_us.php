@@ -13,23 +13,18 @@
     <!-- COMMENTING THESE OUT FOR NOW, USING ORIGINAL CSS MADE FOR PAGE (Daniel) -->
     <!--<link rel="stylesheet" href="css/navbar.css">-->
     <!--<link rel="stylesheet" href="css/studentlogin.css">-->
-    <link rel="stylesheet" href="about_us.css">
+    <link rel="stylesheet" href="./css/about_us.css">
+    <?php require('./navbar.php'); ?>
   </head>
   <!-- Body code for the structure of the website (Jacy) -->
 
 <body style="">
-  <?php require('./navbar.php'); ?>
-
-  <div class="navbar"> <!-- Navigation bar at top of page -->
-    <a href="../index.php">Back</a> <!-- Back button (ADD LINK TO GO BACK TO MAIN PAGE) -->
-  </div>
-
   <h1>About us</h1>
   <h2>The Team</h2>
   <!-- Column cards to display pictures and bio of team -->
   <div class="row">
     <div class="column">
-      <img src="danielamoruso.jpg" alt="Daniel">
+      <img src="./about_page/danielamoruso.jpg" alt="Daniel">
       <h2>Daniel Amoruso</h2>
       <p class="title">Designer</p>
       <p>Data Schema Designer, HTML, CSS</p>
@@ -37,7 +32,7 @@
     </div>
 
     <div class="column">
-      <img src="maxzedlovich.jpg" alt="Max">
+      <img src="./about_page/maxzedlovich.jpg" alt="Max">
       <div class="container">
         <h2>Max Zedlovich</h2>
         <p class="title">Designer</p>
@@ -47,7 +42,7 @@
     </div>
 
     <div class="column">
-      <img src="angelflores.jpg" alt="Angel">
+      <img src="./about_page/angelflores.jpg" alt="Angel">
       <div class="container">
         <h2>Angel Flores</h2>
         <p class="title">Designer</p>
@@ -57,7 +52,7 @@
     </div>
 
     <div class="column">
-      <img src="jacylin.jpg" alt="Jacy">
+      <img src="./about_page/jacylin.jpg" alt="Jacy">
       <div class="container">
         <h2>Jacy Lin</h2>
         <p class="title">Designer</p>
@@ -67,7 +62,7 @@
     </div>
 
     <div class="column">
-      <img src="ramsesterry.png" alt="Max">
+      <img src="./about_page/ramsesterry.png" alt="Max">
       <div class="container">
         <h2>Ramses Terry</h2>
         <p class="title">Designer</p>

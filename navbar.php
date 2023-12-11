@@ -17,7 +17,7 @@
             <a id="majors" class="nav-link" href="./majors.php">Majors</a>
             <a id="one" class="nav-link one-big" href="./apply.php">Apply</a>
             <a id="two" class="nav-link two-big" href="./login.php">Login</a>
-            <a id="three" class="nav-link three-big" href="./staff.php">Staff</a>
+            <a id="three" class="nav-link three-big" href="./about_us.php">About Us</a>
             <div class="dropdown">
                 <button class="dropbtn" onclick="showDropDown()">Dropdown
                     <i class="fa fa-caret-down"></i>
@@ -30,7 +30,7 @@
                         <a id="two-small-a" class="nav-link" href="./login.php">Login</a>
                     </div>
                     <div class="three-small">
-                        <a id="three-small-a" class="nav-link" href="./staff.php">Staff</a>
+                        <a id="three-small-a" class="nav-link" href="./about_us.php">About Us</a>
                     </div>
                 </div>
             </div>

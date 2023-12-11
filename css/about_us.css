@@ -24,7 +24,7 @@ h2 {
 
 body {
     background-color: steelblue;
-    background-image: url("nplandscape_1.png");
+    background-image: url("./about_page/nplandscape_1.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -104,3 +104,4 @@ img {
     /* padding: 10px; */
     /* margin: 20px; */
 }
+
