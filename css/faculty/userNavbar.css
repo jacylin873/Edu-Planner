@@ -10,7 +10,7 @@
 }
     #topnav {
     width:100%;
-    position: sticky;
+    position: absolute;
     top:0;
     height: 60px;
     left:0;
