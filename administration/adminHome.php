@@ -26,6 +26,7 @@ if (isset($_COOKIE[$cookie_name])) {
     
     <script src="../navbar.js"></script>
     </body>
+    <?php require('../loggedFooter.php'); ?>
         </html>
         <?php 
     }
