@@ -1,15 +1,16 @@
 <?php
 abstract class Course
 {
+    //max
     private static $classList = array();
     private static int $courseCount = 0;
     private int $uuid = 0;
     private int $credits = 3;
     private int $startHour = 0;
+    private string $courseName = "";
     private int $startMinute = 0;
     private int $endHour = 0;
     private int $endMinute = 0;
-    //end of gross code
     public function getStartTime(): string
     {
         return $this->startHour . ":" . $this->startMinute;

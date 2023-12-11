@@ -4,23 +4,24 @@ body{
 }
 #home-img-txt-h1{
     font-size: 10vw;
-    color: #013e7f;
-    text-shadow: 1px 1px black;
- 
+    -webkit-text-stroke: 4px #013e7f;
     white-space: nowrap;
+    margin: -9px;
     overflow: hidden;
   }
 #home-img-txt-h2{
-    font-size: 8vw;
-    color: #f58426;
-    text-shadow: 1px 1px black;
+    font-size: 4vw;
+    color: darkorange; /* easier to use darkorange then a colorcode @Max*/
+    /* text-shadow: 0px 2px 20px black; */
+    margin: 2px;
+    -webkit-text-stroke: 1.5px #013e7f;
 }
 .home-bg-img-div {
     position: relative;
     text-align: center;
     color: white;
-    margin-top:7vh;
-    z-index:-1;
+    z-index: 1;
+    margin: auto;
 }
 .home-bg-img-centered {
     position: absolute;
@@ -28,3 +29,46 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+h1 content{
+    outline: #013e7f auto;
+    padding: 10px;
+    margin: 1px;
+    background: linear-gradient(0deg, #013e7f, #668BB2);
+    color: white;
+}
+div#filler {
+    display: block;
+    outline: auto;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    background: white;
+}
+
+div#Sidebar {
+    float: left;
+    margin: 10px;
+    outline: auto;
+    padding: 10px;
+    width: 77vmin;
+    background: linear-gradient(0deg, #013e7f,#013e7f);
+}
+h1.hp {
+    margin: auto;
+    padding: 10px;
+    color: white;
+    background: linear-gradient(0deg, steelblue, #81beff);
+    outline: darkorange 10px;
+    /* outline-style: solid; */
+    outline-width: 2px;
+    /* border-radius: 10px; */
+}
+
+div#content {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+div#Sidebar a {line-height: 1.5;background: white;padding: 3px;margin: 9px;float: left;display: contents;border-style: outset;/* width: 200px; */color: black;font-weight: bold;text-decoration: underline;-webkit-text-stroke: thin;-webkit-text-fill-color: white;}
+div#content {background: linear-gradient(to top,#668BB2,#dbedff);}

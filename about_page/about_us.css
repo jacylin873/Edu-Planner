@@ -18,6 +18,8 @@ h2 {
     font-size: 40px;
     text-align: center;
     color: darkorange;
+        /* max */
+
 }
 
 body {
@@ -29,12 +31,76 @@ body {
 
 .column {
     float: left;
-    width: 15%;
+    width: 12em;
     padding: 0 8px;
+    color: black;
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    outline: darkorange outset 5px;
 }
 
 .card {
     background-color: white;
     text-align: center;
 }
-  
+
+img {
+    width: -webkit-fill-available;
+    height: 12em;
+    /* margin: 22px; */
+    /* padding: 10px; */
+    /* float: left; */
+    /* max */
+}
+
+.row {
+    display: flow-root;
+}
+
+.container {
+    /* width: 10em; */
+        /* max */
+
+    justify-content: center;
+    display: block;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-block-size: 100px;
+}
+
+img {
+    width: 12em;
+    height: 12em;
+    /* margin: 22px; */
+    /* padding: 10px; */
+    /* float: left; */
+    /* align-self: center; */
+        /* max */
+    /* display: block; */
+}
+
+.container {
+    /* width: 10em; */
+    /* max */
+    justify-content: center;
+    display: block;
+}
+
+.row {
+    /* background: white; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-block-size: 100px;
+    /* padding: 10px; */
+    /* margin: 20px; */
+}

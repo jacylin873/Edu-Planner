@@ -1,0 +1,15 @@
+p.footer {
+    background: linear-gradient(to top, #668BB2, #013e7f);
+    display: block;
+    padding: 10px;
+    position: absolute;
+    width: -webkit-fill-available;
+    color: white;
+    text-align: center;
+    margin-top: -21px;
+}
+
+p.footer a {
+
+    color: cyan;
+}
