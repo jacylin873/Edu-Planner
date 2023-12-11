@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2023 at 02:14 AM
+-- Generation Time: Dec 11, 2023 at 04:15 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -486,78 +486,80 @@ INSERT INTO `course_subjects` (`SUBID`, `subjects`, `crn_value`) VALUES
 --
 -- Table structure for table `majors_minors`
 --
--- Creation: Dec 11, 2023 at 01:13 AM
+-- Creation: Dec 11, 2023 at 03:07 AM
+-- Last update: Dec 11, 2023 at 03:08 AM
 --
 
 CREATE TABLE `majors_minors` (
-  `majors` varchar(25) DEFAULT NULL,
-  `minors` varchar(25) DEFAULT NULL,
-  `interdisciplinary_majors` varchar(25) DEFAULT NULL,
-  `interdisciplinary_minors` varchar(25) DEFAULT NULL
+  `CEY` int(11) NOT NULL,
+  `majors` varchar(55) DEFAULT NULL,
+  `minors` varchar(55) DEFAULT NULL,
+  `interdisciplinary_majors` varchar(55) DEFAULT NULL,
+  `interdisciplinary_minors` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `majors_minors`
 --
 
-INSERT INTO `majors_minors` (`majors`, `minors`, `interdisciplinary_majors`, `interdisciplinary_minors`) VALUES
-('Accounting', 'Adolescence Education', 'Asian Studies', 'Ancient World Studies'),
-('Adolescence Education', 'Ancient World Studies', 'Environmental Science', 'Asian Studies'),
-('Anthropology', 'Anthropology', 'Environmental Studies', 'Audio Engineering - NEW'),
-('Art History', 'Applied Mathematics', 'General Studies (degree-c', 'Deaf Studies'),
-('Asian Studies', 'Art History', 'International Relations', 'Digital Design & Fabricat'),
-('Astronomy', 'Art Studio', 'Latin American, Caribbean', 'Disaster Studies'),
-('Biochemistry', 'Asian Studies', 'Women\'s, Gender & Sexuali', 'Environmental Science'),
-('Biology', 'Asian American Studies - ', '', 'Environmental Studies'),
-('Black Studies', 'Astronomy', '', 'Evolutionary Studies'),
-('Business Analytics', 'Audio Engineering', '', 'Film & Video Studies'),
-('Ceramics', 'Biology', '', 'International Relations'),
-('Chemistry', 'Black Studies', '', 'Italian Studies'),
-('Communication Disorders', 'Business', '', 'Jewish Studies'),
-('Communication Studies', 'Business Analytics', '', 'Latin American, Caribbean'),
-('Computer Engineering', 'Chemistry', '', 'Law & Politics'),
-('Computer Science', 'Communication Studies', '', 'Linguistics'),
-('Digital Media Production', 'Computer Science', '', 'Medieval and Early Modern'),
-('Digital Media Programming', 'Creative Writing', '', 'Native American Studies'),
-('Early Childhood & Childho', 'Deaf Studies', '', 'Religious Studies'),
-('Early Childhood Studies (', 'Digital Design & Fabricat', '', 'Women\'s, Gender & Sexuali'),
-('Economics', 'Disaster Studies', '', ''),
-('Electrical Engineering', 'Economics', '', ''),
-('English', 'Engineering', '', ''),
-('Entrepreneurship', 'English', '', ''),
-('Environmental Science', 'Environmental Science', '', ''),
-('Environmental Studies', 'Environmental Studies', '', ''),
-('Finance', 'Evolutionary Studies', '', ''),
-('French', 'Film & Video Studies', '', ''),
-('General Business', 'French', '', ''),
-('Geography', 'Geography', '', ''),
-('Geology', 'Geology', '', ''),
-('Graphic Design', 'German', '', ''),
-('History', 'History', '', ''),
-('International Business', 'Industrial & Organization', '', ''),
-('International Relations', 'International Relations', '', ''),
-('Journalism', 'Italian Studies', '', ''),
-('Latin American, Caribbean', 'Jewish Studies', '', ''),
-('Management', 'Journalism', '', ''),
-('Marketing', 'Latin American, Caribbean', '', ''),
-('Mathematics', 'Law & Politics', '', ''),
-('Mechanical Engineering', 'Linguistics', '', ''),
-('Metal', 'Mathematics', '', ''),
-('Music', 'Medieval and Early Modern', '', ''),
-('Painting', 'Music', '', ''),
-('Philosophy', 'Native American Studies', '', ''),
-('Photography', 'Philosophy', '', ''),
-('Physics', 'Physics', '', ''),
-('Political Science', 'Political Science', '', ''),
-('Printmaking', 'Psychology', '', ''),
-('Psychology', 'Religious Studies', '', ''),
-('Sculpture', 'Social Justice Educationa', '', ''),
-('Sociology', 'Sociology', '', ''),
-('Spanish', 'Spanish', '', ''),
-('Theatre Arts', 'Theatre Arts', '', ''),
-('Visual Arts', 'Urban Planning', '', ''),
-('Visual Arts Education', 'Women\'s, Gender, and Sexu', '', ''),
-('Women\'s, Gender, and Sexu', '', '', '');
+INSERT INTO `majors_minors` (`CEY`, `majors`, `minors`, `interdisciplinary_majors`, `interdisciplinary_minors`) VALUES
+(1, 'Accounting', 'Adolescence Education', 'Asian Studies', 'Ancient World Studies'),
+(2, 'Adolescence Education', 'Ancient World Studies', 'Environmental Science', 'Asian Studies'),
+(3, 'Anthropology', 'Anthropology', 'Environmental Studies', 'Audio Engineering - NEW'),
+(4, 'Art History', 'Applied Mathematics', 'General Studies (degree-completion program, availa', 'Deaf Studies'),
+(5, 'Asian Studies', 'Art History', 'International Relations', 'Digital Design & Fabrication'),
+(6, 'Astronomy', 'Art Studio', 'Latin American, Caribbean & Latinx Studies', 'Disaster Studies'),
+(7, 'Biochemistry', 'Asian Studies', 'Women\'s, Gender & Sexuality Studies', 'Environmental Science'),
+(8, 'Biology', 'Asian American Studies - ', '', 'Environmental Studies'),
+(9, 'Black Studies', 'Astronomy', '', 'Evolutionary Studies'),
+(10, 'Business Analytics', 'Audio Engineering', '', 'Film & Video Studies'),
+(11, 'Ceramics', 'Biology', '', 'International Relations'),
+(12, 'Chemistry', 'Black Studies', '', 'Italian Studies'),
+(13, 'Communication Disorders', 'Business', '', 'Jewish Studies'),
+(14, 'Communication Studies', 'Business Analytics', '', 'Latin American, Caribbean & Latinx Studies'),
+(15, 'Computer Engineering', 'Chemistry', '', 'Law & Politics'),
+(16, 'Computer Science', 'Communication Studies', '', 'Linguistics'),
+(17, 'Digital Media Production', 'Computer Science', '', 'Medieval and Early Modern'),
+(18, 'Digital Media Programming', 'Creative Writing', '', 'Native American Studies'),
+(19, 'Early Childhood & Childho', 'Deaf Studies', '', 'Religious Studies'),
+(20, 'Early Childhood Studies (non-certification program)', 'Digital Design & Fabrication', '', 'Women\'s, Gender & Sexuality Studies'),
+(21, 'Economics', 'Disaster Studies', '', ''),
+(22, 'Electrical Engineering', 'Economics', '', ''),
+(23, 'English', 'Engineering', '', ''),
+(24, 'Entrepreneurship', 'English', '', ''),
+(25, 'Environmental Science', 'Environmental Science', '', ''),
+(26, 'Environmental Studies', 'Environmental Studies', '', ''),
+(27, 'Finance', 'Evolutionary Studies', '', ''),
+(28, 'French', 'Film & Video Studies', '', ''),
+(29, 'General Business', 'French', '', ''),
+(30, 'Geography', 'Geography', '', ''),
+(31, 'Geology', 'Geology', '', ''),
+(32, 'Graphic Design', 'German', '', ''),
+(33, 'History', 'History', '', ''),
+(34, 'International Business', 'Industrial & Organization', '', ''),
+(35, 'International Relations', 'International Relations', '', ''),
+(36, 'Journalism', 'Italian Studies', '', ''),
+(37, 'Latin American, Caribbean', 'Jewish Studies', '', ''),
+(38, 'Management', 'Journalism', '', ''),
+(39, 'Marketing', 'Latin American, Caribbean', '', ''),
+(40, 'Mathematics', 'Law & Politics', '', ''),
+(41, 'Mechanical Engineering', 'Linguistics', '', ''),
+(42, 'Metal', 'Mathematics', '', ''),
+(43, 'Music', 'Medieval and Early Modern', '', ''),
+(44, 'Painting', 'Music', '', ''),
+(45, 'Philosophy', 'Native American Studies', '', ''),
+(46, 'Photography', 'Philosophy', '', ''),
+(47, 'Physics', 'Physics', '', ''),
+(48, 'Political Science', 'Political Science', '', ''),
+(49, 'Printmaking', 'Psychology', '', ''),
+(50, 'Psychology', 'Religious Studies', '', ''),
+(51, 'Sculpture', 'Social Justice Educationa', '', ''),
+(52, 'Sociology', 'Sociology', '', ''),
+(53, 'Spanish', 'Spanish', '', ''),
+(54, 'Theatre Arts', 'Theatre Arts', '', ''),
+(55, 'Visual Arts', 'Urban Planning', '', ''),
+(56, 'Visual Arts Education', 'Women\'s, Gender, and Sexu', '', ''),
+(57, 'Women\'s, Gender, and Sexu', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -565,7 +567,7 @@ INSERT INTO `majors_minors` (`majors`, `minors`, `interdisciplinary_majors`, `in
 -- Table structure for table `user_profile`
 --
 -- Creation: Nov 29, 2023 at 10:21 PM
--- Last update: Dec 11, 2023 at 01:11 AM
+-- Last update: Dec 11, 2023 at 01:26 AM
 --
 
 CREATE TABLE `user_profile` (
@@ -592,7 +594,7 @@ CREATE TABLE `user_profile` (
 
 INSERT INTO `user_profile` (`UPID`, `user_email`, `user_password`, `f_name`, `m_name`, `l_name`, `address1`, `address2`, `city`, `state`, `zip`, `country`, `phone_num`, `clearance`, `classes`) VALUES
 (1, 'changeme@newpaltz.edu', 'hellochange', 'Change', 'F', 'Me', '13113 Here Road', 'Apt. C5', 'Johnstown', 'CA', '90210', 'USA', '555-123-9587', 0, '[]'),
-(2, 'angelf@newpatz.edu', 'helloangel', 'Angel', 'O', 'Flores', '21 Bieber St.', 'Apt. A11', 'New York City', 'New York', '50401', 'United States', '555-666-7777', 0, '[]'),
+(2, 'angelf@newpaltz.edu', 'helloangel', 'Angel', 'O', 'Flores', '21 Bieber St.', 'Apt. A11', 'New York City', 'New York', '50401', 'United States', '555-666-7777', 0, '[]'),
 (26, 'denizard@newpaltz.edu', 'hellodenizard', 'Anthony', '', 'Denizard', '14 Zelmer Street', '', 'Bronx', 'New York', '14052', 'United States', '123-456-7777', 1, '[]'),
 (34, 'ramses@newpaltz.edu', 'helloramses', 'Ramses', '', 'Terry', '21 Yardhouse Rd.', '', 'Yorktown', 'New York', '20355', 'United States', '456-968-2215', 2, '[]');
 
@@ -629,6 +631,12 @@ ALTER TABLE `course_codes`
 --
 ALTER TABLE `course_subjects`
   ADD PRIMARY KEY (`SUBID`);
+
+--
+-- Indexes for table `majors_minors`
+--
+ALTER TABLE `majors_minors`
+  ADD PRIMARY KEY (`CEY`);
 
 --
 -- Indexes for table `user_profile`
@@ -669,6 +677,12 @@ ALTER TABLE `course_codes`
 --
 ALTER TABLE `course_subjects`
   MODIFY `SUBID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+
+--
+-- AUTO_INCREMENT for table `majors_minors`
+--
+ALTER TABLE `majors_minors`
+  MODIFY `CEY` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `user_profile`
