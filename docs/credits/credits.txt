@@ -1,0 +1,2 @@
+User signup, class creation, course creation, search faculty, and apply forms CSS and HTML inspired from:
+* https://www.codingnepalweb.com/responsive-registration-form-in-html-css/
