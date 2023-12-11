@@ -1,2 +1,3 @@
 User signup, class creation, course creation, search faculty, and apply forms CSS and HTML inspired from:
 * https://www.codingnepalweb.com/responsive-registration-form-in-html-css/
+jQuery and Ajax assisted development using ChatGPT for schedulePlanner and schedulePlanner helper files, calendar, facultyManage and helper files  
