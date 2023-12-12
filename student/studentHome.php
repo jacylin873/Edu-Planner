@@ -1,12 +1,15 @@
 <?php 
+//Start session @Ramses
 session_start();
+//Set cookie name and create user array @Ramses
 $cookie_name = "eduPlanner_logged_user";
 $user_array;
+//Check if cookie is set
 if (isset($_COOKIE[$cookie_name])) {
+    //Unserialize cookie data and save to array @Ramses
     $serializedData = $_COOKIE[$cookie_name];
     $user_array = unserialize($serializedData);
-    
-
+    //Check if user clearence is student @Ramses
     if ($user_array['clearance'] == 2)  {
 
         ?>
@@ -14,7 +17,7 @@ if (isset($_COOKIE[$cookie_name])) {
 <html>
    <head>
       <meta charset="utf-8">
-      <title>SUNY NP Faculty Home</title>
+      <title>SUNY NP Student Home</title>
    </head>
    <body>
    <?php require('./navbar.php'); ?>
@@ -28,6 +31,7 @@ if (isset($_COOKIE[$cookie_name])) {
     }
 }
 else{
+    //Redirect to login if user data not set @Ramses
     header("Location: ../login.php");
     exit();
 }
