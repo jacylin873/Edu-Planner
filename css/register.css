@@ -68,7 +68,7 @@ transition: all 0.1s ease;
 width: 100%;  
 }
 /*Defines CSS of the country element before the dropdown @Ramses*/
-.countries{
+.countries{ /* mystery box model bug lives in here. be careful what you touch @max */
 border: 1px solid #013e7f;
 border-radius: 8px;
 font-size: 16px;
@@ -131,17 +131,12 @@ border-color: #f58426;
 background: #d9d9d9;
 border-color: #f58426;
 }
-
-
-
-
-
 /*Removes radio display @Ramses*/
 form input[type="radio"]{
  display: none;
 }
 /*Sets CSS properties of the Register button @Ramses */
-.button input{
+.button input{ /* not the prettiest button ive made @max */
 background: #fff;
 border: none;
 border-radius: 20px;

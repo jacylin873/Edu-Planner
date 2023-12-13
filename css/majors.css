@@ -30,7 +30,7 @@ body{
 }
 
 .list {
-   padding: 13px;
+   padding: 13px; /* took liberties here. width probably isnt the best solution @max */
    outline: auto 3px;
    border: auto;
    width: 40%;

@@ -170,12 +170,12 @@ body {
     bottom: 100%;
   }
 }
-h1.hp {
+h1.hp { /* fixed the missing header element @max */
   margin: 10px;
   padding: 10px;
   color: white;
   background: linear-gradient(0deg, steelblue, #81beff);
-  outline: darkorange 10px;
+  outline: darkorange 10px; /* moved colorcode to darkorange @max */
   outline-style: solid;
   outline-width: 2px;
   border-radius: 10px;
