@@ -21,7 +21,6 @@ if (isset($_COOKIE[$cookie_name])) {
             <h2>Upon clicking edit button, open up a field to edit the section of user info</h2>    
             </div>
     </body>
-    <?php require('../loggedFooter.php'); ?>
 </html>
         <?php 
     }

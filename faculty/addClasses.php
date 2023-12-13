@@ -1,16 +1,19 @@
 <?php
+//Include connection @Ramses
 include("../includes/connect.php");
+//Query all course subjects
 $sqlSubjects = "SELECT * FROM course_subjects";
 $resultSubjects = $conn->query($sqlSubjects);
+//Check if number of subjects greater than 0 @Ramses
 if ($resultSubjects->num_rows > 0) {
-?>
-<?php 
 session_start();
+//Define cookie name, check if cookie exists, and unserialize it into array @Ramses
 $cookie_name = "eduPlanner_logged_user";
 $user_array;
 if (isset($_COOKIE[$cookie_name])) {
     $serializedData = $_COOKIE[$cookie_name];
     $user_array = unserialize($serializedData);
+    //Check if faculty clearence
     if ($user_array['clearance'] == 1)  {
         ?>
 <!DOCTYPE html>
@@ -21,6 +24,7 @@ if (isset($_COOKIE[$cookie_name])) {
     <link rel="stylesheet" href="../css/faculty/createClassForm.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
+        //Function to load courses based on selected subject @Ramses
         function loadCourses() {
             var selectedSubject = $("#subjectDropdown").val();
             $.ajax({
@@ -32,6 +36,7 @@ if (isset($_COOKIE[$cookie_name])) {
                 }
             });
         }
+        //Function to get course details for the subject @Ramses
         function getCourseDetails() {
             var selectedCourse = $("#courseDropdown").val();
             $.ajax({
@@ -54,9 +59,11 @@ if (isset($_COOKIE[$cookie_name])) {
                 Class Creation Page
             </div>
             <div class="content">
+                <!--Call addClassFunction on submission @Ramses -->
                 <form action="addClassFunction.php" method="post"> 
                     <div class="user-information">
                         <div class="input-box">
+                            <!--PHP to get list of subjects from database @Ramses -->
                             <span for="subjectDropdown" class="user-input" style="display: inline; float: none;">Select Subject:</span>
                                 <select class="formDropdown" id="subjectDropdown" name="subject" onchange="loadCourses()" required>
                                 <option value="" selected>Select a subject</option>
@@ -67,16 +74,19 @@ if (isset($_COOKIE[$cookie_name])) {
                                     ?>
                                 </select>
                         </div>
+                    <!--Dynamic dropdocwn for selecting course from selected subject  @Ramses-->
                     <div class="input-box">
                         <span for="courseDropdown" class="user-input" style="display: inline; float: none;">Select Course: </span>
                         <select class="formDropdown" id="courseDropdown" name="course" required>
                             <option value="" selected>Select a subject</option>
                         </select>
                     </div>
+                    <!--Text inout for section of class  @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Section</span>
                         <input type="text" placeholder="Enter the section of the class" id="sec" name="sec" required>
                     </div>
+                    <!--Dropdown input for instructional method  @Ramses-->
                     <div class="input-box">
                         <span for="instructionalMethodDropdown" class="user-input" style="display: inline; float: none;">Instructional Method:</span>
                         <select class="formDropdown" id="instructionalMethodDropdown" name="instructional_method" required>
@@ -90,10 +100,12 @@ if (isset($_COOKIE[$cookie_name])) {
                             </select>
                         </select>
                     </div>
+                    <!--Text input for class location  @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Class Location</span>
                         <input type="text" placeholder="Enter the classroom location" id="loc" name="loc" required>
                     </div>
+                    <!--Day input for class days  @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Days</span>
                         <select class="formDropdown" id="days" name="days" required>
@@ -120,7 +132,8 @@ if (isset($_COOKIE[$cookie_name])) {
                             <option value="RS">RS</option>
                             <option value="FS">FS</option>
                         </select>
-                    </div> 
+                    </div>   
+                    <!--Start time dropdown for class start times  @Ramses-->                
                     <div class="input-box">
                         <span class="user-input">Class Start Time</span>
                         <select class="formDropdown" id="start_time" name="start_time" required>
@@ -151,6 +164,7 @@ if (isset($_COOKIE[$cookie_name])) {
                             <option value="7:30 PM">7:30 PM</option>
                         </select>
                     </div>
+                    <!--Class length dropdown  @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Class Length</span>
                         <select class="formDropdown" id="timer" name="timer" required>
@@ -181,6 +195,7 @@ if (isset($_COOKIE[$cookie_name])) {
                             <option value="6:00">6:00</option>
                         </select>
                     </div>
+                    <!--Start month dropdown @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Class Start Month</span>
                         <select class="formDropdown" id="start_month" name="start_month" required>
@@ -198,6 +213,7 @@ if (isset($_COOKIE[$cookie_name])) {
                             <option value="12">December</option>
                         </select>
                     </div>
+                    <!-- Start day dropdown  @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Class Start Day</span>
                         <select class="formDropdown" id="start_day" name="start_day" required>
@@ -206,6 +222,7 @@ if (isset($_COOKIE[$cookie_name])) {
                             <?php } ?>
                         </select>
                     </div>
+                    <!--End month dropdown  @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Class End Month</span>
                         <select class="formDropdown" id="end_month" name="end_month" required>
@@ -223,14 +240,16 @@ if (isset($_COOKIE[$cookie_name])) {
                             <option value="12">December</option>
                         </select>
                     </div>
+                    <!--End day dropdown  @Ramses-->
                     <div class="input-box">
-                        <span class="user-input">Class Start Day</span>
+                        <span class="user-input">Class End Day</span>
                         <select class="formDropdown" id="end_day" name="end_day" required>
                             <?php for ($day = 1; $day <= 31; $day++) { ?>
                                 <option value="<?php echo sprintf('%02d', $day); ?>"><?php echo $day; ?></option>
                             <?php } ?>
                         </select>
                     </div>
+                    <!--Class size dropdown from 1-120  @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Class Size</span>
                         <select class="formDropdown" id="available_seats" name="available_seats" required>
@@ -240,6 +259,7 @@ if (isset($_COOKIE[$cookie_name])) {
                         </select>
                     </div>
                     </div>
+                    <!--Confirm want to create class @Ramses-->
                     <div class="choice-user-input">
                         <input type="radio" name="choice" id="dot-1" value="true" required>
                         <input type="radio" name="choice" id="dot-2" value="false" checked="checked">
@@ -255,8 +275,9 @@ if (isset($_COOKIE[$cookie_name])) {
                         </label>
                         </div>
                     </div>
+                    <!--Button for submission  @Ramses-->
                     <div class="button">
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Create Class">
                     </div>
             </form>
             </div>
@@ -270,12 +291,14 @@ if (isset($_COOKIE[$cookie_name])) {
     }
 }
 else{
+    //Redirect to login if not logged in @Ramses
     header("Location: ../login.php");
     exit();
 }
 ?>
 <?php
 } else {
+    //Echo no subjects in table  @Ramses
     echo "No data found in the course_subjects table.";
 }
 
