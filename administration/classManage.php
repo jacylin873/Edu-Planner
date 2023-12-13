@@ -1,23 +1,27 @@
 <?php
+//Include database connection @Ramses
 include("../includes/connect.php");
+//Query subjects from database @Ramses
 $sqlSubjects = "SELECT * FROM course_subjects";
 $resultSubjects = $conn->query($sqlSubjects);
+//Check if there are subjects @Ramses
 if ($resultSubjects->num_rows > 0) {
-?>
-<?php 
 session_start();
 $cookie_name = "eduPlanner_logged_user";
 $user_array;
+//Check if user is logged in @Ramses
 if (isset($_COOKIE[$cookie_name])) {
     $serializedData = $_COOKIE[$cookie_name];
+    //Unserialize cookie data and store in array @Ramses
     $user_array = unserialize($serializedData);
+    //Check if user is faculty @Ramses
     if ($user_array['clearance'] == 0)  {
         ?>
 <!DOCTYPE html>
 <html>
    <head>
       <meta charset="utf-8">
-      <title>SUNY NP Faculty Home</title>
+      <title>SUNY NP Manage Courses</title>
       <link rel="stylesheet" href="../css/admin/createClassForm.css">
    </head>
    <body>
@@ -37,6 +41,7 @@ if (isset($_COOKIE[$cookie_name])) {
                                 <select class="formDropdown" id="subjectDropdown" name="subject" onchange="loadCourses()" required>
                                 <option value="" selected>Select a subject</option>
                                     <?php
+                                    //Display subjects in a dropdown @Ramses
                                     while ($row = $resultSubjects->fetch_assoc()) {
                                         echo "<option value='" . $row['crn_value'] . "'>" . $row['subjects'] . "</option>";
                                     }
@@ -44,7 +49,7 @@ if (isset($_COOKIE[$cookie_name])) {
                                 </select>
                         </div>
 
-
+                    <!--Dropdown for whether course is for undergraduate or graduate students  @Ramses-->
                     <div class="input-box">
                         <span for="header" class="user-input" style="display: inline; float: none;">Select wheter undergaduate or graduate:</span>
                         <select class="formDropdown" id="header" name="header" required>
@@ -54,6 +59,7 @@ if (isset($_COOKIE[$cookie_name])) {
                             </select>
                         </select>
                     </div>
+                    <!--Dropdown for course level  @Ramses-->
                     <div class="input-box">
                         <span for="courseNums" class="user-input" style="display: inline; float: none;">Select course level:</span>
                         <select class="formDropdown" id="courseNums" name="courseNums" required>
@@ -67,10 +73,12 @@ if (isset($_COOKIE[$cookie_name])) {
                             </select>
                         </select>
                     </div>
+                    <!--Input for course title  @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Title</span>
                         <input type="text" placeholder="Enter the title of the class" id="title" name="title" required>
                     </div>
+                    <!--Dropdown for amount of credits a class is  @Ramses-->
                     <div class="input-box">
                         <span for="credits" class="user-input" style="display: inline; float: none;">Credit Amount:</span>
                         <select class="formDropdown" id="credits" name="credits" required>
@@ -86,12 +94,13 @@ if (isset($_COOKIE[$cookie_name])) {
                             </select>
                         </select>
                     </div>
+                    <!--Input of attributes for the course @Ramses-->
                     <div class="input-box">
                         <span class="user-input">Attributes</span>
                         <input type="text" placeholder="Enter the attributes of the class" id="attributes" name="attributes" required>
                     </div>
                     </div>
-
+                    <!--Button to choose if sure want to create new class  @Ramses-->
                     <div class="choice-user-input">
                         <input type="radio" name="choice" id="dot-1" value="true" required>
                         <input type="radio" name="choice" id="dot-2" value="false" checked="checked">
@@ -107,6 +116,7 @@ if (isset($_COOKIE[$cookie_name])) {
                         </label>
                         </div>
                     </div>
+                    <!--Button for submission  @Ramses-->
                     <div class="button">
                     <input type="submit" value="Create">
                     </div>
@@ -127,12 +137,14 @@ if (isset($_COOKIE[$cookie_name])) {
     }
 }
 else{
+    //Send user back to login if not faculty @Ramses
     header("Location: ../login.php");
     exit();
 }
 ?>
 <?php
 } else {
+    //Echo message if no data found in course_subjects table @Ramses
     echo "No data found in the course_subjects table.";
 }
 

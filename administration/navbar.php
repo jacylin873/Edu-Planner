@@ -1,26 +1,28 @@
-<?php 
+<?php
+//Include database connection and start session @Ramses
+include("../includes/connect.php");
+//Define cookie name and create array @Ramses
 $cookie_name = "eduPlanner_logged_user";
 $user_array;
+//Check if cookie exists @Ramses
 if (isset($_COOKIE[$cookie_name])) {
     $serializedData = $_COOKIE[$cookie_name];
     $user_array = unserialize($serializedData);
-    
-    // Now, $arrayData contains the original array.
-
+    //Check if user has faculty clearence @Ramses
     if ($user_array['clearance'] == 0)  {
-
         ?>
 <!DOCTYPE html>
 <html>
    <head>
       <meta charset="utf-8">
-      <title>SUNY NP Faculty Home</title>
       <link rel="stylesheet" href="../css/admin/userNavbar.css">
    </head>
    <body>
    <nav id="topnav">
         <div class="wrap-nav">
+        <!-- @Show admin name @Ramses-->
         <a id="majors" class="nav-link" href=""> <h3>Admin: <?php echo $user_array['f_name'];?></h3></a>
+        <!--Show Home, Create User, Manage Faculty, Manage Classes, and Logout in navbar @Ramses-->
         <a id="one" class="nav-link one-big" href="./AdminHome.php">Home</a>
         <a id="two" class="nav-link two-big" href="./newUser.php">Create User</a>
         <a id="three" class="nav-link three-big" href="./facultyManage.php">Manage Faculty</a>
@@ -31,6 +33,7 @@ if (isset($_COOKIE[$cookie_name])) {
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" onclick="hideDropDown()" id="myDropdown">
+            <!--Show the navbar options as a dropdown @Ramses-->
                 <div class="one-small">
                     <a id="one-small-a" class="nav-link" href="./AdminHome.php">Home</a>
                 </div>
